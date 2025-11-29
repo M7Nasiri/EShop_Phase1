@@ -1,0 +1,17 @@
+﻿body {
+    background-color: #f7f7f7;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}

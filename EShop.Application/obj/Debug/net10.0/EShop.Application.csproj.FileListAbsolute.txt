@@ -1,0 +1,16 @@
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.csproj.AssemblyReference.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.AssemblyInfoInputs.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.AssemblyInfo.cs
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.csproj.CoreCompileInputs.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.sourcelink.json
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\bin\Debug\net10.0\EShop.Application.deps.json
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\bin\Debug\net10.0\EShop.Application.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\bin\Debug\net10.0\EShop.Application.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\bin\Debug\net10.0\EShop.Domain.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\bin\Debug\net10.0\EShop.Domain.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Ap.140E939F.Up2Date
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\refint\EShop.Application.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\EShop.Application.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Application\obj\Debug\net10.0\ref\EShop.Application.dll

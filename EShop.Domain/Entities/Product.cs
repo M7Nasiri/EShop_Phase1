@@ -13,5 +13,7 @@ namespace EShop.Domain.Entities
         public long UnitCost { get; set; }
         public int Stock { get; set; }
         public int Rate { get; set; }
+        public bool IsInSlider { get; set; }
+        public bool IsDelete { get; set; }
     }
 }

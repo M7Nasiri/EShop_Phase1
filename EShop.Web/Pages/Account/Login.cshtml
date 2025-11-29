@@ -1,0 +1,39 @@
+﻿@page "/Login"
+@model EShop.Web.Pages.Account.LoginModel
+@{
+}
+
+<div class="container">
+    <form method="post" asp-page="/Account/Login">
+        <input type="hidden" name="ReturnUrl" value="@ViewData["ReturnUrl"]" />
+        <div class="form-group">
+            <label class="form-label">نام کاربری</label>
+            <input type="text" asp-for="model.UserName" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">رمز عبور</label>
+            <input type="password" asp-for="model.Password" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">مرا بخاطر بسپار</label>
+            <input type="checkbox" asp-for="model.RememberMe" />
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn btn-primary">ورود</button>
+            <button type="reset" class="reset-btn btn btn-danger">پاک کردن</button>
+        </div>
+        <div class="form-group">
+            <a asp-page="register">آیا هنوز ثبت نام ، نکرده اید ؟ ثبت نام</a>
+        </div>
+        <div class="text-danger">
+            <div asp-validation-summary="All"></div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}

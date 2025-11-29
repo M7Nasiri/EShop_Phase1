@@ -1,0 +1,24 @@
+﻿@using EShop.Domain.ViewModels.ProductAgg
+@model ShowProductViewModel
+
+<div class="col-md-3 mb-4">
+    <div class="card shadow-sm" style="border-radius:10px;">
+        <img src="@Model.ImagePath" class="card-img-top" style="height:200px; object-fit:cover;" />
+
+        <div class="card-body text-center">
+
+            <h6 class="card-title">@Model.Title</h6>
+
+            <p class="text-muted">@Model.UnitCost.ToString("N0") تومان</p>
+
+            <div class="d-flex justify-content-between">
+                <a href="/Products/Details?id=@Model.Id" class="btn btn-outline-primary btn-sm">جزییات</a>
+
+                <button class="btn btn-success btn-sm">
+                    <i class="bi bi-cart"></i> سبد
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

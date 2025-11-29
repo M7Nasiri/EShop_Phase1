@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - فروشگاه</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+
+            <a class="navbar-brand" href="/">فروشگاه من</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Products/Add">افزودن محصول</a></li>
+                </ul>
+
+                <form class="d-flex" method="get" action="/Search">
+                    <input class="form-control ms-2" type="search" placeholder="جستجو..." name="q">
+                    <button class="btn btn-light" type="submit">جستجو</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container mt-4 flex-grow-1">
+
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-auto">
+        <p>© @DateTime.Now.Year فروشگاه من – تمامی حقوق محفوظ است.</p>
+    </footer>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

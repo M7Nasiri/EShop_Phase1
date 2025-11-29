@@ -1,0 +1,45 @@
+﻿@page
+@model EShop.Web.Pages.Product.CreateModel
+@{
+    ViewData["Title"] = "افزودن محصول";
+}
+
+<div class="card p-4 shadow-sm">
+    <h4 class="mb-3">افزودن محصول جدید</h4>
+
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">عنوان</label>
+            <input class="form-control" asp-for="Product.Title" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">توضیحات</label>
+            <textarea class="form-control" asp-for="Product.Description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">آدرس تصویر</label>
+            <input class="form-control" asp-for="Product.ImagePath" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">قیمت</label>
+            <input class="form-control" asp-for="Product.UnitCost" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">موجودی</label>
+            <input class="form-control" asp-for="Product.Stock" />
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" asp-for="Product.IsInSlider" />
+            <label class="form-check-label">محصول در اسلایدر قرار بگیرد</label>
+        </div>
+
+        <button class="btn btn-primary">ثبت</button>
+
+    </form>
+</div>

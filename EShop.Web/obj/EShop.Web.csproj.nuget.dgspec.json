@@ -32,7 +32,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj": {
+                "projectPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -1217,6 +1221,9 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
+              "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\EShop.Application.csproj": {
+                "projectPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\EShop.Application.csproj"
+              },
               "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj": {
                 "projectPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj"
               }

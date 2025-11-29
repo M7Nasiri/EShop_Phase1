@@ -76,6 +76,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "EShop.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EShop.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EShop.Domain.dll": {}
+        }
       }
     }
   },
@@ -179,11 +189,17 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EShop.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EShop.Domain/EShop.Domain.csproj",
+      "msbuildProject": "../EShop.Domain/EShop.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0"
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
+      "EShop.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -218,7 +234,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj": {
+              "projectPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\EShop.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

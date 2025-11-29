@@ -1,0 +1,58 @@
+﻿@page
+@model EShop.Web.Pages.Product.DetailsModel
+@{
+    ViewData["Title"] = "جزئیات محصول";
+}
+
+<div class="card shadow-sm p-4">
+
+    <div class="row">
+
+        <div class="col-md-5 text-center">
+            <img src="@Model.Product.ImagePath"
+                 class="img-fluid rounded"
+                 style="max-height:350px; object-fit:cover;" />
+        </div>
+
+        <div class="col-md-7">
+
+            <h3 class="mb-3">@Model.Product.Title</h3>
+
+            <p class="text-muted fs-5">
+                قیمت: @Model.Product.UnitCost.ToString("N0") تومان
+            </p>
+
+            <p>
+                <strong>موجودی:</strong> @Model.Product.Stock عدد
+            </p>
+
+            <p>
+                <strong>امتیاز:</strong>
+                @for (int i = 1; i <= 5; i++)
+                {
+                    if (i <= Model.Product.Rate)
+                    {
+                        <span class="text-warning">&#9733;</span>
+                    }
+                    else
+                    {
+                        <span class="text-secondary">&#9733;</span>
+                    }
+                }
+            </p>
+
+            <div class="mt-4 d-flex gap-2">
+
+                <button class="btn btn-success">
+                    <i class="bi bi-cart"></i> افزودن به سبد خرید
+                </button>
+
+                <a href="/Products" class="btn btn-secondary">بازگشت</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

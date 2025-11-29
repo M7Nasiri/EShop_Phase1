@@ -1486,7 +1486,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "EShop.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EShop.Application.dll": {}
@@ -1509,6 +1510,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "EShop.Application": "1.0.0",
           "EShop.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.0"
         },

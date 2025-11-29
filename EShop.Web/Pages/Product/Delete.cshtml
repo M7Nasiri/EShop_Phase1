@@ -1,0 +1,28 @@
+﻿@page
+@model EShop.Web.Pages.Product.DeleteModel
+@{
+    ViewData["Title"] = "حذف محصول";
+}
+
+<div class="card p-4 shadow-sm">
+
+    <h4 class="text-danger mb-3">حذف محصول</h4>
+
+    <p>آیا از حذف محصول زیر اطمینان دارید؟</p>
+
+    <div class="d-flex">
+        <img src="@Model.Product.ImagePath" style="width:200px; height:200px; object-fit:cover;" class="me-3" />
+
+        <div>
+            <h5>@Model.Product.Title</h5>
+            <p>@Model.Product.Description</p>
+            <p class="text-muted">@Model.Product.UnitCost.ToString("N0") تومان</p>
+            <p>موجودی: @Model.Product.Stock</p>
+        </div>
+    </div>
+
+    <form method="post" class="mt-3">
+        <button class="btn btn-danger">حذف</button>
+        <a href="/Products" class="btn btn-secondary">انصراف</a>
+    </form>
+</div>
