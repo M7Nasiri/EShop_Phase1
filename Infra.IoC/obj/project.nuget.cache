@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "e5uYmQNCvdM=",
+  "success": true,
+  "projectFilePath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.IoC\\Infra.IoC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0\\microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
