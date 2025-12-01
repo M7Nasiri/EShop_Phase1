@@ -12,6 +12,12 @@ namespace Infra.Data.Configurations
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.HasQueryFilter(c => !c.IsDelete);
+
+            builder.HasData(
+                new Category { Id = 1, Title = "محصولات دیجیتال", Description = "دسته بندی محصولات دیجیتال شامل موبایل و لبتاب" },
+                new Category { Id = 2, Title = "پوشاک", Description = "پوشاک شامل کت وشلوار ، لباس های اسپرت" },
+                new Category { Id = 3, Title = "محصولات آرایشی بهداشتی", Description = "محصولات آرایشی و بهداشتی " }
+                );
         }
     }
 }

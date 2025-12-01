@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EShop.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,5 +13,7 @@ namespace EShop.Domain.ViewModels.ProductAgg
         public long UnitCost { get; set; }
         public int Stock { get; set; }
         public int Rate { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }

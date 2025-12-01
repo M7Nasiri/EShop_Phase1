@@ -1,0 +1,64 @@
+﻿.basket {
+    display: none;
+    flex-direction: column;
+    width: 350px;
+    background: #fff;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    padding: 1rem;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    z-index: 2001;
+    border-radius: 10px;
+}
+
+    .basket.show {
+        display: flex !important;
+    }
+
+.backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+
+    .backdrop.show {
+        display: block !important;
+    }
+
+.basket-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+    .basket-item div {
+        margin: 0 5px;
+    }
+
+    .basket-item button {
+        cursor: pointer;
+    }
+
+.basket-btn {
+    margin-top: 10px;
+}

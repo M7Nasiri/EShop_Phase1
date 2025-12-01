@@ -11,6 +11,12 @@
         <span asp-validation-for="model.UserName" class="text-danger"></span>
 
     </div>
+    <div class="mb-3">
+        <label class="form-label">نام کامل</label>
+        <input type="text" asp-for="model.FullName" class="form-control" />
+        <span asp-validation-for="model.FullName" class="text-danger"></span>
+
+    </div>
     <div class="form-group">
         <label for="Role">دسته‌بندی</label>
         <select class="form-control" asp-for="model.Role">

@@ -15,5 +15,8 @@ namespace EShop.Domain.Entities
         public int Rate { get; set; }
         public bool IsInSlider { get; set; }
         public bool IsDelete { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public List<UserCartItem>? CartItems { get; set; }
     }
 }

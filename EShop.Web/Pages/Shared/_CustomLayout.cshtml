@@ -1,65 +1,141 @@
-﻿@{
+﻿@using System.Security.Claims
+@using EShop.Application.Dtos
+@using EShop.Application.Interfaces
+@using EShop.Domain.Entities
+@using Microsoft.AspNetCore.Antiforgery
+@inject ICartService cartService
+@inject IHttpContextAccessor accessor
+
+@inject IAntiforgery antiforgery
+@{
     Layout = null;
+    string cookie = accessor.HttpContext.Request.Cookies["guest_cart"];
+    int cartCount = 0;
+
+    if (User.Identity.IsAuthenticated)
+    {
+        cartCount = await cartService.GetUserCartCount(int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value));
+    }
+    else if (!string.IsNullOrEmpty(cookie))
+    {
+        var items = System.Text.Json.JsonSerializer.Deserialize<List<GuestCartItem>>(cookie);
+        cartCount = items.Count();
+    }
 }
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="utf-8" />
     <title>@ViewData["Title"] - فروشگاه</title>
-
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/basket.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
 <body class="d-flex flex-column min-vh-100">
+    <form method="post" id="cart-form">
+        @Html.AntiForgeryToken()
+    </form>
 
+    <!-- سبد خرید -->
+    <!-- آیکون سبد خرید -->
+    <header>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-        <div class="container">
-
-            <a class="navbar-brand" href="/">فروشگاه من</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Products/Add">افزودن محصول</a></li>
-                </ul>
-
-                <form class="d-flex" method="get" action="/Search">
-                    <input class="form-control ms-2" type="search" placeholder="جستجو..." name="q">
-                    <button class="btn btn-light" type="submit">جستجو</button>
-                </form>
-
+        <div class="basket-icon position-fixed top-0 end-0 m-3" style="cursor:pointer; z-index:2000;">
+            <i class="fa fa-shopping-cart fa-2x"></i>
+            <span id="cart-count" class="basket-counter badge bg-danger">@cartCount</span>
+        </div>
+        <div class="basket position-fixed top-0 end-0 m-5 p-3 bg-white shadow">
+            <div class="basket-title text-center mb-2"><span>سبد خرید</span></div>
+            <div id="basket-content" class="basket-content flex-grow-1"></div>
+            <div class="basket-btn d-flex justify-content-between mt-3">
+                <span class="bs-totalPrice">قیمت کل: 0 تومان</span>
+                <div>
+                    <button class="btn btn-sm btn-outline-danger bs-clear-btn" type="button">حذف همه</button>
+                    <button class="btn btn-sm btn-primary bs-pay-btn" type="button">پرداخت</button>
+                </div>
             </div>
         </div>
-    </nav>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/">فروشگاه من</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <div class="inside">
+                            <p>@(User.Identity.Name) خوش آمدید!</p>
+                            <a asp-page="/Account/Logout" class="btn btn-danger">خروج</a>
+                        </div>
 
-    <!-- Main -->
+                    }
+                    else
+                    {
+                        <a asp-page="/Account/Login" class="btn btn-secondary">ورود</a>
+                    }
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+
+
+    </header>
+
+
+    <!-- بکدراپ -->
+    <div class="backdrop"></div>
+
+
+    <!-- سبد خرید -->
+    @* <div class="basket-icon position-fixed top-0 end-0 m-3" style="cursor:pointer; z-index:1000;">
+        <i class="fa fa-shopping-cart fa-2x" style="width:10px;height:auto;color:white"></i>
+        <span id="cart-count" class="basket-counter badge bg-danger">@cartCount</span>
+    </div>
+
+
+    <div class="backdrop"></div>
+    <div class="basket position-fixed top-0 end-0 m-5 p-3 bg-white shadow" style="width:350px; z-index:1001; flex-direction:column;">
+        <div class="basket-title text-center mb-2"><span>سبد خرید</span></div>
+        <div id="basket-content" class="basket-content flex-grow-1"></div>
+        <div class="basket-btn d-flex justify-content-between mt-3">
+            <span class="bs-totalPrice">قیمت کل : 0 تومان</span>
+            <div>
+                <button class="btn btn-sm btn-outline-danger bs-clear-btn">حذف همه</button>
+                <button class="btn btn-sm btn-primary bs-pay-btn">پرداخت</button>
+            </div>
+        </div>
+    </div> *@
+
+
+
+
     <main class="container mt-4 flex-grow-1">
-
         @RenderBody()
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center mt-auto">
+    <footer class="text-center mt-auto bg-dark text-white py-3">
         <p>© @DateTime.Now.Year فروشگاه من – تمامی حقوق محفوظ است.</p>
     </footer>
+    <script>
+        window.userIsLoggedIn = @(User.Identity.IsAuthenticated.ToString().ToLower());
+        window.serverCartItems = @Html.Raw(Json.Serialize(Model.CartItems ?? new List<CartItemDto>()));
+    </script>
 
     <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/js/shopcart.js" type="module"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

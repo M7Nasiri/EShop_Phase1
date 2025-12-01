@@ -42,6 +42,29 @@ namespace Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cateogries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "دسته بندی محصولات دیجیتال شامل موبایل و لبتاب",
+                            IsDelete = false,
+                            Title = "محصولات دیجیتال"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "پوشاک شامل کت وشلوار ، لباس های اسپرت",
+                            IsDelete = false,
+                            Title = "پوشاک"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "محصولات آرایشی و بهداشتی ",
+                            IsDelete = false,
+                            Title = "محصولات آرایشی بهداشتی"
+                        });
                 });
 
             modelBuilder.Entity("EShop.Domain.Entities.Order", b =>
@@ -52,6 +75,9 @@ namespace Infra.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("GuestId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -61,7 +87,7 @@ namespace Infra.Data.Migrations
                     b.Property<long>("TotalCount")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -88,6 +114,9 @@ namespace Infra.Data.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<long>("UnitPrice")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
@@ -105,7 +134,7 @@ namespace Infra.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -143,6 +172,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 1,
+                            CategoryId = 1,
                             Description = "لباس مناسب ورزش روزانه",
                             ImagePath = "/Products/1.jpg",
                             IsDelete = false,
@@ -155,6 +185,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 2,
+                            CategoryId = 2,
                             Description = "کفش حرفه‌ای راحتی",
                             ImagePath = "/Products/2.jpg",
                             IsDelete = false,
@@ -167,6 +198,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 3,
+                            CategoryId = 3,
                             Description = "ساعت هوشمند با امکانات کامل",
                             ImagePath = "/Products/3.jpg",
                             IsDelete = false,
@@ -179,6 +211,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 4,
+                            CategoryId = 1,
                             Description = "کیفیت بالا و باتری مناسب",
                             ImagePath = "/Products/4.jpg",
                             IsDelete = false,
@@ -191,6 +224,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 5,
+                            CategoryId = 1,
                             Description = "مناسب سفر و دانشگاه",
                             ImagePath = "/Products/5.jpg",
                             IsDelete = false,
@@ -203,6 +237,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 6,
+                            CategoryId = 1,
                             Description = "کیبورد RGB حرفه‌ای",
                             ImagePath = "/Products/6.jpg",
                             IsDelete = false,
@@ -215,6 +250,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 7,
+                            CategoryId = 2,
                             Description = "ماوس با حساسیت بالا",
                             ImagePath = "/Products/7.jpg",
                             IsDelete = false,
@@ -227,6 +263,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 8,
+                            CategoryId = 3,
                             Description = "مانیتور Full HD",
                             ImagePath = "/Products/8.jpg",
                             IsDelete = false,
@@ -239,6 +276,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 9,
+                            CategoryId = 2,
                             Description = "قابلیت شارژ سریع",
                             ImagePath = "/Products/9.jpg",
                             IsDelete = false,
@@ -251,6 +289,7 @@ namespace Infra.Data.Migrations
                         new
                         {
                             Id = 10,
+                            CategoryId = 1,
                             Description = "کیفیت صدای بالا",
                             ImagePath = "/Products/10.jpg",
                             IsDelete = false,
@@ -299,13 +338,35 @@ namespace Infra.Data.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("EShop.Domain.Entities.UserCartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("UserCartItems");
+                });
+
             modelBuilder.Entity("EShop.Domain.Entities.Order", b =>
                 {
                     b.HasOne("EShop.Domain.Entities.User", "User")
                         .WithMany("Orders")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });
@@ -331,9 +392,24 @@ namespace Infra.Data.Migrations
 
             modelBuilder.Entity("EShop.Domain.Entities.Product", b =>
                 {
-                    b.HasOne("EShop.Domain.Entities.Category", null)
+                    b.HasOne("EShop.Domain.Entities.Category", "Category")
                         .WithMany("Products")
-                        .HasForeignKey("CategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("EShop.Domain.Entities.UserCartItem", b =>
+                {
+                    b.HasOne("EShop.Domain.Entities.Product", "Product")
+                        .WithMany("CartItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("EShop.Domain.Entities.Category", b =>
@@ -344,6 +420,11 @@ namespace Infra.Data.Migrations
             modelBuilder.Entity("EShop.Domain.Entities.Order", b =>
                 {
                     b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("EShop.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("CartItems");
                 });
 
             modelBuilder.Entity("EShop.Domain.Entities.User", b =>

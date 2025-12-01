@@ -1,6 +1,7 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Interfaces;
 using EShop.Domain.ViewModels.UserAgg;
+using System.Security.Claims;
 
 namespace EShop.Application.Services
 {
@@ -78,6 +79,10 @@ namespace EShop.Application.Services
                 model.Password = user.Password;
             }
             return userRepository.UpdateUserByAdmin(adminId, id, model);
+        }
+        public int GetCurrentUserId(ClaimsPrincipal user)
+        {
+            return int.Parse(user.FindFirst(ClaimTypes.NameIdentifier).Value);
         }
     }
 }

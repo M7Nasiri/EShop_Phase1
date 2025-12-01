@@ -14,6 +14,7 @@ namespace Infra.Data.Persistence
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<UserCartItem> UserCartItems { get; set; }
 
 
         public AppDbContext(DbContextOptions options) : base(options)

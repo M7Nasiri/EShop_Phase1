@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EShop.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,5 +15,7 @@ namespace EShop.Domain.ViewModels.ProductAgg
         public int Rate { get; set; }
         public bool IsInSlider { get; set; }
         public bool IsDelete { get; set; }
+        public Category Category { get; set; }
+        public int CategoryId { get; set; }
     }
 }

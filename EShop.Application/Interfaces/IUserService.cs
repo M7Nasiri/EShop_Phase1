@@ -1,4 +1,5 @@
 ﻿using EShop.Domain.ViewModels.UserAgg;
+using System.Security.Claims;
 
 namespace EShop.Application.Interfaces
 {
@@ -18,6 +19,7 @@ namespace EShop.Application.Interfaces
         bool DeleteUserByAdmin(int adminId, DeleteUserByAdmin delete);
 
         List<UserInfoForAdmin> GetUserInfosForAdmin(int userId);
+        int GetCurrentUserId(ClaimsPrincipal user);
 
     }
 }

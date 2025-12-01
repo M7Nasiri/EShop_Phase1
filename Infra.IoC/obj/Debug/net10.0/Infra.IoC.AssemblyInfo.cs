@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Infra.IoC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+868ee315694638ac87927b5231b45605874ec395")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+615ad1360ff55fae8f9bf00092d9c782583d8604")]
 [assembly: System.Reflection.AssemblyProductAttribute("Infra.IoC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Infra.IoC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

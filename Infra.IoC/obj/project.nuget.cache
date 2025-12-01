@@ -7,15 +7,5 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.0\\microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.IoC\\Infra.IoC.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.IoC\\Infra.IoC.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

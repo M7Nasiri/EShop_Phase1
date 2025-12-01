@@ -1,4 +1,5 @@
 ﻿@page
+@using EShop.Application.Dtos
 @model IndexModel
 @{
     ViewData["Title"] = "محصولات";
@@ -6,34 +7,17 @@
 
 <h3 class="mb-4">محصولات</h3>
 
-<!-- Slider -->
-@if (Model.Products.Any(p => p.IsInSlider))
-{
-    <div id="slider" class="carousel slide mb-5" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @foreach (var item in Model.Products.Where(p => p.IsInSlider))
-            {
-                <div class="carousel-item @(item == Model.Products.First() ? "active" : "")">
-                    <img src="@item.ImagePath" class="d-block w-100" style="height:350px; object-fit:cover;" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>@item.Title</h5>
-                    </div>
-                </div>
-            }
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-}
-
-<!-- Product Grid -->
 <div class="row">
     @foreach (var product in Model.Products.Where(p => !p.IsDelete))
     {
         <partial name="_ProductBox" model="product" />
     }
 </div>
+
+@section Scripts {
+          <script>
+        window.productsData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Products))
+        window.serverCartItems = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.CartItems ?? new List<EShop.Application.Dtos.CartItemDto>()));        window.userIsLoggedIn = @User.Identity.IsAuthenticated.ToString().ToLower();
+    </script>    
+    <script src="~/js/shopcart.js" defer></script>
+}

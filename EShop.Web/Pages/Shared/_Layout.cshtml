@@ -1,53 +1,88 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using System.Security.Claims
+@using EShop.Application.Interfaces
+@using EShop.Domain.Entities
+@inject ICartService cartService
+@inject IHttpContextAccessor accessor
+
+@{
+    Layout = null;
+    string cookie = accessor.HttpContext.Request.Cookies["guest_cart"];
+    int cartCount = 0;
+
+    if (User.Identity.IsAuthenticated)
+    {
+        cartCount = await cartService.GetUserCartCount(int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value));
+    }
+    else if (!string.IsNullOrEmpty(cookie))
+    {
+        var items = System.Text.Json.JsonSerializer.Deserialize<List<GuestCartItem>>(cookie);
+        cartCount = items.Sum(x => x.Count);
+    }
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EShop.Web</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link href="~/css/mainlayout.css" rel="stylesheet" />
-    <link rel="stylesheet" href="~/EShop.Web.styles.css" asp-append-version="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - فروشگاه</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/shop.css" rel="stylesheet" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">EShop.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- سبد خرید -->
+    <div class="basket-icon position-fixed top-0 end-0 m-3" style="cursor:pointer; z-index:1000;">
+        <i class="fa fa-shopping-cart fa-2x"></i>
+        <span class="basket-counter badge bg-danger">@cartCount</span>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - EShop.Web - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <div class="backdrop"></div>
+
+    <div class="basket position-fixed top-0 end-0 m-5 p-3 bg-white shadow" style="width:350px; display:none; z-index:1001; flex-direction:column;">
+        <div class="basket-title text-center mb-2"><span>سبد خرید</span></div>
+        <div class="basket-content flex-grow-1"></div>
+        <div class="basket-btn d-flex justify-content-between mt-3">
+            <span class="bs-totalPrice">قیمت کل : 0 تومان</span>
+            <div>
+                <button class="btn btn-sm btn-outline-danger bs-clear-btn">حذف همه</button>
+                <button class="btn btn-sm btn-primary bs-pay-btn">پرداخت</button>
+            </div>
         </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="/">فروشگاه من</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4 flex-grow-1">
+        @RenderBody()
+    </main>
+
+    <footer class="text-center mt-auto bg-dark text-white py-3">
+        <link href="d:\maktabsharif\dev\projects\hw22\eshop\eshop.web\pages\shared\_layout.cshtml.css" rel="stylesheet" />
+        <a href="d:\maktabsharif\dev\projects\hw22\eshop\eshop.web\pages\shared\_layout.cshtml">d:\maktabsharif\dev\projects\hw22\eshop\eshop.web\pages\shared\_layout.cshtml</a>
+        <p>© @DateTime.Now.Year فروشگاه من – تمامی حقوق محفوظ است.</p>
     </footer>
 
+    <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/shopcart.js" type="module"></script>
+    <script src="~/js/products.js" type="module"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
