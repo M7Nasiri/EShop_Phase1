@@ -57,11 +57,20 @@ namespace EShop.Web.Pages.Account
                 var guestCartCookie = Request.Cookies["guest_cart"];
                 if (!string.IsNullOrEmpty(guestCartCookie))
                 {
-                    var guestItems = JsonSerializer.Deserialize<List<GuestCartItem>>(guestCartCookie);
+                    try
+                    {
+                        var guestItems = JsonSerializer.Deserialize<List<GuestCartItem>>(guestCartCookie);
+                        if (guestItems != null && guestItems.Count > 0)
+                        {
+                            await cartService.MergeGuestCartIntoUserCart(result.Id, guestItems);
+                        }
+                    }
+                    catch
+                    {
+                        // اگر JSON خراب بود، نادیده می‌گیریم
+                    }
 
-                    await cartService.MergeGuestCartIntoUserCart(result.Id, guestItems);
-
-                    Response.Cookies.Delete("guest_cart");
+                   // Response.Cookies.Delete("guest_cart");
                 }
 
 

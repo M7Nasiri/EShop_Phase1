@@ -37,7 +37,7 @@ namespace EShop.Web.Pages.Cart
                 return new JsonResult(new { isGuest = true });
 
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            await _cartService.RemoveFromCart(userId, dto.ProductId);
+            await _cartService.RemoveFromUserCart(userId, dto.ProductId);
             var cartItems = await _cartService.GetUserCartItems(userId);
 
             return new JsonResult(new

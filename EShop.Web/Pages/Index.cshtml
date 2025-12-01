@@ -17,7 +17,8 @@
 @section Scripts {
           <script>
         window.productsData = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Products))
-        window.serverCartItems = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.CartItems ?? new List<EShop.Application.Dtos.CartItemDto>()));        window.userIsLoggedIn = @User.Identity.IsAuthenticated.ToString().ToLower();
+        window.serverCartItems = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.CartItems ?? new List<EShop.Application.Dtos.CartItemDto>()));  
+        window.userIsLoggedIn = @User.Identity.IsAuthenticated.ToString().ToLower();
     </script>    
     <script src="~/js/shopcart.js" defer></script>
 }

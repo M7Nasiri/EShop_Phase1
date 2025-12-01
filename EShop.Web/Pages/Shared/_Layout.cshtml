@@ -16,7 +16,7 @@
     else if (!string.IsNullOrEmpty(cookie))
     {
         var items = System.Text.Json.JsonSerializer.Deserialize<List<GuestCartItem>>(cookie);
-        cartCount = items.Sum(x => x.Count);
+        cartCount = items.Sum(x => x.quantity);
     }
 }
 

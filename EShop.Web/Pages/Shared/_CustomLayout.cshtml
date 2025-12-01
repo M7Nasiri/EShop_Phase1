@@ -11,7 +11,6 @@
     Layout = null;
     string cookie = accessor.HttpContext.Request.Cookies["guest_cart"];
     int cartCount = 0;
-
     if (User.Identity.IsAuthenticated)
     {
         cartCount = await cartService.GetUserCartCount(int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value));
@@ -19,8 +18,24 @@
     else if (!string.IsNullOrEmpty(cookie))
     {
         var items = System.Text.Json.JsonSerializer.Deserialize<List<GuestCartItem>>(cookie);
-        cartCount = items.Count();
+        cartCount = items?.Count() ?? 0;
     }
+
+    // چک ایمن برای CartItems
+
+    var cartItems = new List<CartItemDto>();
+    if (Model != null)
+    {
+        var prop = Model.GetType().GetProperty("CartItems");
+        if (prop != null)
+        {
+            var value = prop.GetValue(Model);
+            if (value != null)
+                cartItems = value as List<CartItemDto> ?? new List<CartItemDto>();
+        }
+    }
+
+
 }
 
 <!DOCTYPE html>
@@ -45,10 +60,7 @@
     <!-- آیکون سبد خرید -->
     <header>
 
-        <div class="basket-icon position-fixed top-0 end-0 m-3" style="cursor:pointer; z-index:2000;">
-            <i class="fa fa-shopping-cart fa-2x"></i>
-            <span id="cart-count" class="basket-counter badge bg-danger">@cartCount</span>
-        </div>
+        <!-- Basket Panel (باز شدن) -->
         <div class="basket position-fixed top-0 end-0 m-5 p-3 bg-white shadow">
             <div class="basket-title text-center mb-2"><span>سبد خرید</span></div>
             <div id="basket-content" class="basket-content flex-grow-1"></div>
@@ -60,37 +72,53 @@
                 </div>
             </div>
         </div>
+
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
-            <div class="container">
+            <div class="container d-flex justify-content-between align-items-center">
+
+                <!-- Logo -->
                 <a class="navbar-brand" href="/">فروشگاه من</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        <div class="inside">
-                            <p>@(User.Identity.Name) خوش آمدید!</p>
-                            <a asp-page="/Account/Logout" class="btn btn-danger">خروج</a>
-                        </div>
 
-                    }
-                    else
-                    {
-                        <a asp-page="/Account/Login" class="btn btn-secondary">ورود</a>
-                    }
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
                         <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
                     </ul>
                 </div>
+
+                <!-- RIGHT SIDE: Basket + Login -->
+                <div class="d-flex align-items-center gap-3">
+
+                    <!-- Basket Icon (inside navbar now) -->
+                    <div class="basket-icon position-relative" style="cursor:pointer;">
+                        <i class="fa fa-shopping-cart fa-2x text-white"></i>
+                        <span id="cart-count" class="basket-counter badge bg-danger">@cartCount</span>
+                    </div>
+
+                    <!-- Login / Logout -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <span class="text-white fw-bold">@User.Identity.Name خوش آمدید!</span>
+                        <a asp-page="/Account/Logout" class="btn btn-sm btn-danger">خروج</a>
+                    }
+                    else
+                    {
+                        <a asp-page="/Account/Login" class="btn btn-sm btn-light">ورود</a>
+                    }
+
+                </div>
+
             </div>
-            
         </nav>
 
-
     </header>
+
+
 
 
     <!-- بکدراپ -->
@@ -129,13 +157,12 @@
     </footer>
     <script>
         window.userIsLoggedIn = @(User.Identity.IsAuthenticated.ToString().ToLower());
-        window.serverCartItems = @Html.Raw(Json.Serialize(Model.CartItems ?? new List<CartItemDto>()));
+        window.serverCartItems = @Html.Raw(Json.Serialize(cartItems));
     </script>
 
     <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
-    <script src="~/js/shopcart.js" type="module"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -6,8 +6,8 @@ namespace EShop.Domain.Entities
 {
     public class GuestCartItem
     {
-        public int ProductId { get; set; }
-        public int Count { get; set; }
+        public int productId { get; set; }
+        public int quantity { get; set; }
     }
 
 }
