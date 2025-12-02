@@ -7,13 +7,15 @@ using System.Security.Claims;
 
 namespace EShop.Web.Pages.Product
 {
-    public class DetailsModel(ICartService cartService,IUserService userService) : PageModel
+    public class DetailsModel(ICartService cartService,IUserService userService,IProductService _productService) : PageModel
     {
+        [BindProperty]
         public ProductDetailsViewModel Product { get; set; }
-        public async Task OnGet(int productId)
+        public async Task OnGet(int id)
         {
             var userId = userService.GetCurrentUserId(User);
-         
+            Product = _productService.GetProductDetailsById(id);
+
         }
 
         public async Task<IActionResult> OnPostAddToCart(int productId)
@@ -24,7 +26,6 @@ namespace EShop.Web.Pages.Product
             }
 
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
             await cartService.AddToUserCart(userId, productId);
 
             return new JsonResult(new { guest = false });

@@ -202,7 +202,14 @@
     // پرداخت
     // -----------------------------
     bsPayBtn.addEventListener("click", () => {
-        window.location.href = "/User/Checkout";
+        if (isGuest) {
+            alert("لطفاً ابتدا وارد حساب کاربری شوید.");
+            window.location.href = "/Login";
+            return;
+        }
+
+        // حالت لاگین → انتقال به صفحه پرداخت
+        window.location.href = "/Order/Checkout";
     });
 
     // -----------------------------

@@ -1,4 +1,5 @@
-﻿using EShop.Domain.ViewModels.UserAgg;
+﻿using EShop.Domain.Entities;
+using EShop.Domain.ViewModels.UserAgg;
 
 namespace EShop.Domain.Interfaces
 {
@@ -17,6 +18,8 @@ namespace EShop.Domain.Interfaces
         int CreateUserByAdmin(int adminId, CreateUserByAdmin create);
         bool DeleteUserByAdmin(int adminId, DeleteUserByAdmin delete);
         List<UserInfoForAdmin> GetUserInfosForAdmin(int userId);
+        long GetUserWallet(int userId);
+        void UpdateUserWallet(int userId,long remain);
 
     }
 }

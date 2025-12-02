@@ -1,4 +1,5 @@
-﻿using EShop.Domain.ViewModels.UserAgg;
+﻿using EShop.Domain.Entities;
+using EShop.Domain.ViewModels.UserAgg;
 using System.Security.Claims;
 
 namespace EShop.Application.Interfaces
@@ -20,6 +21,9 @@ namespace EShop.Application.Interfaces
 
         List<UserInfoForAdmin> GetUserInfosForAdmin(int userId);
         int GetCurrentUserId(ClaimsPrincipal user);
-
+        long GetUserWallet(int userId);
+        bool ISCreditSufficient(long credit, long cost);
+        void DecreaseWallet(int userId, long totalPrice);
+        void UpdateUserWallet(int userId, long remain);
     }
 }

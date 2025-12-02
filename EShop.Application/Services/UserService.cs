@@ -2,6 +2,7 @@
 using EShop.Domain.Interfaces;
 using EShop.Domain.ViewModels.UserAgg;
 using System.Security.Claims;
+using System.Security.Cryptography;
 
 namespace EShop.Application.Services
 {
@@ -83,6 +84,25 @@ namespace EShop.Application.Services
         public int GetCurrentUserId(ClaimsPrincipal user)
         {
             return int.Parse(user.FindFirst(ClaimTypes.NameIdentifier).Value);
+        }
+
+        public long GetUserWallet(int userId)
+        {
+            return userRepository.GetUserWallet(userId);
+        }
+
+        public bool ISCreditSufficient(long credit, long cost)
+        {
+            return credit >= cost;
+        }
+        public void UpdateUserWallet(int userId, long remain)
+        {
+            userRepository.UpdateUserWallet(userId, remain); 
+        }
+        public void DecreaseWallet(int userId, long totalPrice)
+        {
+            long remain = GetUserWallet(userId) - totalPrice;
+            UpdateUserWallet(userId, remain);
         }
     }
 }

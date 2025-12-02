@@ -43,11 +43,13 @@
 
             <div class="mt-4 d-flex gap-2">
 
-                <button class="btn btn-success">
-                    <i class="bi bi-cart"></i> افزودن به سبد خرید
+                <button class="btn btn-outline-primary add-to-card" data-id="@Model.Product.Id"
+                        data-title="@Model.Product.Title"
+                        data-price="@Model.Product.UnitCost">
+                    <i class="fa fa-shopping-cart"></i> سبد
                 </button>
 
-                <a href="/Products" class="btn btn-secondary">بازگشت</a>
+                <a asp-page="/Index" class="btn btn-secondary">بازگشت</a>
 
             </div>
 
@@ -57,5 +59,7 @@
 
 </div>
 @section Scripts{
-    <script src="~/js/addToBasket.js"></script>
+    <script src="~/js/shopcart.js" defer></script>
+@*     <script src="~/js/addToBasket.js"></script>
+ *@
 }

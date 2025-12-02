@@ -15,8 +15,13 @@ namespace EShop.Application.Profiles
         {
             CreateMap<Product, AddProductViewModel>().ReverseMap();
             CreateMap<Product, DeleteProductViewModel>().ReverseMap();
-            CreateMap<Product, ProductDetailsViewModel>().ReverseMap();
-            CreateMap<Product, ShowProductViewModel>().ReverseMap();
+
+            CreateMap<Product, ProductDetailsViewModel>()
+                .ForMember(d => d.CategoryName, opt => opt.MapFrom(src => src.Category.Title));
+            
+            CreateMap<Product, ShowProductViewModel>()
+                .ForMember(d=>d.CategoryName,opt=>opt.MapFrom(src=>src.Category.Title));
+
             CreateMap<Product, UpdateProductViewModel>().ReverseMap();
 
 

@@ -175,6 +175,12 @@ namespace Infra.Data.Repositories
             _context.UserCartItems.RemoveRange(items);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<int> HowManyItemOfThisProductIsBuying(int userId,int id)
+        {
+            return await _context.UserCartItems.Where(uci => uci.UserId == userId && uci.ProductId == id)
+                .Select(uci => uci.Count).FirstOrDefaultAsync();
+        }
     }
 
 }

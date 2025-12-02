@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace EShop.Application.Interfaces
 {
@@ -18,5 +19,7 @@ namespace EShop.Application.Interfaces
         Task RemoveFromUserCart(int userId, int productId);
         Task DeleteFromUserCart(int userId, int productId);
         Task RemoveAllItemRelatedToUser(int userId);
+        Task<long> CalculateTotal(List<UserCartItem> carts);
+
     }
 }

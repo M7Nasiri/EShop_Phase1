@@ -20,6 +20,8 @@ namespace EShop.Domain.Interfaces
         Task RemoveFromCart(int userId, int productId);
 
         Task RemoveAllItemRelatedToUser(int userId);
+
+        Task<int> HowManyItemOfThisProductIsBuying(int userId, int id);
     }
 
 }

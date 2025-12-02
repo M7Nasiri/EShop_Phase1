@@ -11,15 +11,23 @@ using System.Security.Claims;
 
 namespace EShop.Web.Pages
 {
-    public class IndexModel(AppDbContext context,IMapper mapper,ICartService _cartService) : PageModel
+    public class IndexModel(IProductService _productService,IMapper mapper,ICartService _cartService
+        ,ICategoryService _categoryService) : PageModel
     {
         [BindProperty]
         public List<ShowProductViewModel> Products { get; set; }
         [BindProperty]
         public List<CartItemDto> CartItems { get; set; }
+
+        [BindProperty]
+        public List<Category> Categories { get; set; }
+
+        [BindProperty]
+        public GroupingByCategory Group { get; set; }
         public async Task OnGet()
         {
-            Products = mapper.Map<List<ShowProductViewModel>>(context.Products.ToList());
+            Products = _productService.GetAllProductsForShow();
+            Categories = _categoryService.GetAll();
             if (User.Identity.IsAuthenticated)
             {
                 int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
@@ -50,6 +58,13 @@ namespace EShop.Web.Pages
         public class AddToCartDto
         {
             public int ProductId { get; set; }
+        }
+
+        public IActionResult OnPostGroupingBy()
+        {
+            Products = _productService.GroupingByCategory(Group);
+            Categories = _categoryService.GetAll();
+            return Page();
         }
 
      

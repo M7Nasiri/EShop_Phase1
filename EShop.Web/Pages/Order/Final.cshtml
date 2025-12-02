@@ -1,0 +1,53 @@
+﻿@page "{orderId:int}"
+@model EShop.Web.Pages.Order.FinalModel
+<div class="container my-5">
+    @if (Model.IsSuccess)
+    {
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">پرداخت موفق 🎉</h4>
+            </div>
+            <div class="card-body p-3">
+                <p>@Model.Message</p>
+
+                <table class="table table-hover align-middle text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>نام محصول</th>
+                            <th>قیمت واحد</th>
+                            <th>تعداد</th>
+                            <th>مجموع</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.Product.Title</td>
+                                <td>@item.UnitPrice.ToString("N0") تومان</td>
+                                <td>@item.Amount</td>
+                                <td class="text-success fw-bold">@((item.UnitPrice * item.Amount).ToString("N0")) تومان</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer d-flex justify-content-between bg-light">
+                <h5 class="fw-bold">جمع کل:</h5>
+                <h5 class="text-success fw-bold">@Model.TotalPrice.ToString("N0") تومان</h5>
+            </div>
+            <div class="card-body">
+                <a href="/" class="btn btn-primary">بازگشت به فروشگاه</a>
+                <a href="/User/Orders" class="btn btn-outline-success">مشاهده سفارش‌ها</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger text-center shadow-sm">
+            <h4>پرداخت ناموفق ❌</h4>
+            <p>@Model.Message</p>
+            <a href="/Order/Checkout" class="btn btn-warning mt-3">بازگشت به صفحه پرداخت</a>
+        </div>
+    }
+</div>

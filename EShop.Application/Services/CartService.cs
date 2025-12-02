@@ -1,9 +1,11 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
+using EShop.Domain.ViewModels.Checkout;
 using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace EShop.Application.Services
@@ -109,5 +111,12 @@ namespace EShop.Application.Services
         {
             return await _cartRepository.GetUserCartCount(userId);
         }
+
+        public async Task<long> CalculateTotal(List<UserCartItem> carts)
+        {
+            return carts.Sum(x => x.Count * x.Product.UnitCost);
+        }
+
+
     }
 }

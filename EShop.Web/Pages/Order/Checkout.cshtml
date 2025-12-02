@@ -1,0 +1,80 @@
+﻿@page
+@model EShop.Web.Pages.Order.CheckoutModel
+@{
+}
+
+
+<div class="container my-4">
+    <div class="card shadow-sm border-0 rounded-3">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">فاکتور نهایی</h5>
+        </div>
+
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0 align-middle text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>عنوان محصول</th>
+                        <th>قیمت واحد</th>
+                        <th>تعداد</th>
+                        <th>مجموع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Invoice.Items)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@item.Title</td>
+
+                            <td>@item.Price.ToString("N0") تومان</td>
+
+                            <td>@item.Quantity</td>
+
+                            <td class="text-success fw-bold">
+                                @item.LineTotal.ToString("N0") تومان
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-footer bg-light d-flex justify-content-between">
+            <h6 class="mb-0 fw-bold">جمع کل:</h6>
+            <h5 class="text-primary mb-0 fw-bold">
+                @Model.Invoice.TotalPrice.ToString("N0") تومان
+            </h5>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<button id="confirm-pay" class="btn btn-success">تأیید پرداخت</button>
+
+@section Scripts {
+    <script>
+        document.getElementById("confirm-pay").addEventListener("click", async () => {
+
+            const res = await fetch("/Order/Checkout?handler=Pay", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "RequestVerificationToken": document.querySelector("input[name='__RequestVerificationToken']").value
+                },
+                body: JSON.stringify({ confirm: true })
+            });
+
+            const data = await res.json();
+
+            if (!data.success) {
+                alert(data.message);
+                return;
+            }
+
+            window.location.href = "/Order/Final/" + data.orderId;
+        });
+    </script>
+}

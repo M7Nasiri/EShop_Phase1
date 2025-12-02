@@ -15,7 +15,7 @@ namespace EShop.Domain.ViewModels.ProductAgg
         public int Rate { get; set; }
         public bool IsInSlider { get; set; }
         public bool IsDelete { get; set; }
-        public Category Category { get; set; }
+        public string CategoryName { get; set; }
         public int CategoryId { get; set; }
     }
 }

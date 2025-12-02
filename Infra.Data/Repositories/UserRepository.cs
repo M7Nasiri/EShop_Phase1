@@ -5,7 +5,7 @@ using EShop.Domain.ViewModels.UserAgg;
 using Infra.Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace EShop.Data.Repositories
+namespace Infra.Data.Repositories
 {
     public class UserRepository(AppDbContext context, IMapper mapper) : IUserRepository
     {
@@ -101,6 +101,17 @@ namespace EShop.Data.Repositories
         {
             return mapper.Map<List<UserInfoForAdmin>>(context.Users.Where(u => u.Id != userId)
                 .ToList());
+        }
+
+        public long GetUserWallet(int userId)
+        {
+            return context.Users.Where(u => u.Id == userId).Select(x => x.Credit).FirstOrDefault();
+        }
+
+        public void UpdateUserWallet(int userId, long remain)
+        {
+            context.Users.Where(u => u.Id == userId).ExecuteUpdate(setters => setters
+            .SetProperty((x => x.Credit), remain));
         }
     }
 }
