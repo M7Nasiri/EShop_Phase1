@@ -24,14 +24,16 @@ namespace EShop.Web.Pages
 
         [BindProperty]
         public GroupingByCategory Group { get; set; }
+        [BindProperty]
+        public int UserId { get; set; }
         public async Task OnGet()
         {
             Products = _productService.GetAllProductsForShow();
             Categories = _categoryService.GetAll();
             if (User.Identity.IsAuthenticated)
             {
-                int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-                CartItems =  mapper.Map<List<CartItemDto>>(await _cartService.GetUserCartItems(userId));
+                UserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                CartItems =  mapper.Map<List<CartItemDto>>(await _cartService.GetUserCartItems(UserId));
             }
             else
             {
@@ -60,11 +62,17 @@ namespace EShop.Web.Pages
             public int ProductId { get; set; }
         }
 
-        public IActionResult OnPostGroupingBy()
+        public async Task<IActionResult> OnPostGroupingBy()
         {
             Products = _productService.GroupingByCategory(Group);
             Categories = _categoryService.GetAll();
+            if (User.Identity.IsAuthenticated)
+            {
+                UserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                CartItems = mapper.Map<List<CartItemDto>>(await _cartService.GetUserCartItems(UserId));
+            }
             return Page();
+            //return RedirectToPage(new {id = userId });
         }
 
      

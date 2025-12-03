@@ -61,31 +61,31 @@ namespace Infra.Data.Repositories
                 .CountAsync();
         }
 
-        //public async Task AddToCart(int userId, int productId, int count = 1)
-        //{
-        //    // دریافت همه آیتم‌ها از DB یکجا
-        //    var existing = await _context.UserCartItems
-        //        .Where(c => c.UserId == userId && c.ProductId == productId)
-        //        .FirstOrDefaultAsync();
+        public async Task AddToCart(int userId, int productId, int count = 1)
+        {
+            // دریافت همه آیتم‌ها از DB یکجا
+            var existing = await _context.UserCartItems
+                .Where(c => c.UserId == userId && c.ProductId == productId)
+                .FirstOrDefaultAsync();
 
-        //    if (existing != null)
-        //    {
-        //        _context.UserCartItems.Where(x=>x.UserId == userId && x.ProductId ==  productId).ExecuteUpdate(
-        //            setters=>setters.SetProperty((x=>x.Count), existing.Count + count));
-        //    }
-        //    else
-        //    {
-        //        var newItem = new UserCartItem
-        //        {
-        //            UserId = userId,
-        //            ProductId = productId,
-        //            Count = count
-        //        };
-        //        await _context.UserCartItems.AddAsync(newItem);
-        //    }
+            if (existing != null)
+            {
+                _context.UserCartItems.Where(x => x.UserId == userId && x.ProductId == productId).ExecuteUpdate(
+                    setters => setters.SetProperty((x => x.Count), existing.Count + count));
+            }
+            else
+            {
+                var newItem = new UserCartItem
+                {
+                    UserId = userId,
+                    ProductId = productId,
+                    Count = count
+                };
+                await _context.UserCartItems.AddAsync(newItem);
+            }
 
-        //    await _context.SaveChangesAsync();
-        //}
+            await _context.SaveChangesAsync();
+        }
 
         //public async Task AddToCart(int userId, int productId, int count = 1)
         //{
@@ -106,45 +106,45 @@ namespace Infra.Data.Repositories
         //        await _context.SaveChangesAsync();
         //    }
         //}
-        private static readonly Dictionary<int, SemaphoreSlim> _locks = new();
+        //private static readonly Dictionary<int, SemaphoreSlim> _locks = new();
 
-        public async Task AddToCart(int userId, int productId, int count = 1)
-        {
-            SemaphoreSlim sem;
-            lock (_locks)
-            {
-                if (!_locks.ContainsKey(userId))
-                    _locks[userId] = new SemaphoreSlim(1, 1);
-                sem = _locks[userId];
-            }
+        //public async Task AddToCart(int userId, int productId, int count = 1)
+        //{
+        //    SemaphoreSlim sem;
+        //    lock (_locks)
+        //    {
+        //        if (!_locks.ContainsKey(userId))
+        //            _locks[userId] = new SemaphoreSlim(1, 1);
+        //        sem = _locks[userId];
+        //    }
 
-            await sem.WaitAsync();
-            try
-            {
-                var existing = await _context.UserCartItems
-                    .FirstOrDefaultAsync(c => c.UserId == userId && c.ProductId == productId);
+        //    await sem.WaitAsync();
+        //    try
+        //    {
+        //        var existing = await _context.UserCartItems
+        //            .FirstOrDefaultAsync(c => c.UserId == userId && c.ProductId == productId);
 
-                if (existing != null)
-                {
-                    existing.Count += count;
-                }
-                else
-                {
-                    await _context.UserCartItems.AddAsync(new UserCartItem
-                    {
-                        UserId = userId,
-                        ProductId = productId,
-                        Count = count
-                    });
-                }
+        //        if (existing != null)
+        //        {
+        //            existing.Count += count;
+        //        }
+        //        else
+        //        {
+        //            await _context.UserCartItems.AddAsync(new UserCartItem
+        //            {
+        //                UserId = userId,
+        //                ProductId = productId,
+        //                Count = count
+        //            });
+        //        }
 
-                await _context.SaveChangesAsync();
-            }
-            finally
-            {
-                sem.Release();
-            }
-        }
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    finally
+        //    {
+        //        sem.Release();
+        //    }
+        //}
 
 
 

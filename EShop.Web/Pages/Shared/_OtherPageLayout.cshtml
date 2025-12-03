@@ -1,0 +1,85 @@
+﻿@using System.Security.Claims
+@using EShop.Application.Dtos
+@using EShop.Application.Interfaces
+@using EShop.Domain.Entities
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery antiforgery
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <title>@ViewData["Title"] - فروشگاه</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="~/css/basket.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <form method="post" id="cart-form">
+        @Html.AntiForgeryToken()
+    </form>
+
+    <!-- سبد خرید -->
+    <!-- آیکون سبد خرید -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container">
+
+                <!-- Logo (Right) -->
+                <a class="navbar-brand ms-auto" href="/">فروشگاه من</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <!-- Center Menu -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">خانه</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Products">محصولات</a></li>
+                    </ul>
+
+                    <!-- Login/Logout (Left) -->
+                    <div class="d-flex align-items-center me-auto gap-2">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <span class="text-white fw-bold">@User.Identity.Name خوش آمدید!</span>
+                            <a asp-page="/Account/Logout" class="btn btn-sm btn-danger">خروج</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/Account/Login" class="btn btn-sm btn-light">ورود</a>
+                        }
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4 flex-grow-1">
+        @RenderBody()
+    </main>
+
+    <footer class="text-center mt-auto bg-dark text-white py-3">
+        <p>© @DateTime.Now.Year فروشگاه من – تمامی حقوق محفوظ است.</p>
+    </footer>
+    <script>
+        window.userIsLoggedIn = @(User.Identity.IsAuthenticated.ToString().ToLower());
+    </script>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

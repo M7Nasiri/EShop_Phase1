@@ -90,6 +90,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DdXN0b21MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Shared/_OtherPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9PdGhlclBhZ2VMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Shared/_ProductBox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Qcm9kdWN0Qm94LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
