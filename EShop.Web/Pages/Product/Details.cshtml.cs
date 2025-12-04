@@ -13,7 +13,11 @@ namespace EShop.Web.Pages.Product
         public ProductDetailsViewModel Product { get; set; }
         public async Task OnGet(int id)
         {
-            var userId = userService.GetCurrentUserId(User);
+            if (User.Identity.IsAuthenticated)
+            {
+                var userId = userService.GetCurrentUserId(User);
+            }
+            
             Product = _productService.GetProductDetailsById(id);
 
         }
