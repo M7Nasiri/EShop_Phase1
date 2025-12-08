@@ -1,6 +1,6 @@
 ﻿using EShop.Application.Interfaces;
+using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Interfaces;
-using EShop.Domain.ViewModels.UserAgg;
 using System.Security.Claims;
 using System.Security.Cryptography;
 
@@ -8,7 +8,7 @@ namespace EShop.Application.Services
 {
     public class UserService(IUserRepository userRepository) : IUserService
     {
-        public int CreateUserByAdmin(int adminId, CreateUserByAdmin create)
+        public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
         {
             if (IsUserExist(create.UserName))
             {
@@ -22,7 +22,7 @@ namespace EShop.Application.Services
             return userRepository.Delete(id);
         }
 
-        public bool DeleteUserByAdmin(int adminId, DeleteUserByAdmin delete)
+        public bool DeleteUserByAdmin(int adminId, DeleteUserByAdminDto delete)
         {
             return userRepository.DeleteUserByAdmin(adminId, delete);
         }
@@ -32,17 +32,17 @@ namespace EShop.Application.Services
             return userRepository.FindIdByUserName(userName);
         }
 
-        public List<GetUserViewModel> GetAll()
+        public List<GetUserDto> GetAll()
         {
             return userRepository.GetAll();
         }
 
-        public GetUserViewModel? GetUserById(int id)
+        public GetUserDto? GetUserById(int id)
         {
             return userRepository.GetUserById(id);
         }
 
-        public List<UserInfoForAdmin> GetUserInfosForAdmin(int userId)
+        public List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId)
         {
             return userRepository.GetUserInfosForAdmin(userId);
         }
@@ -52,27 +52,27 @@ namespace EShop.Application.Services
             return userRepository.IsUserExist(userName);
         }
 
-        public GetUserViewModel? Login(LoginUserViewModel login)
+        public GetUserDto? Login(LoginUserDto login)
         {
             return userRepository.Login(login);
         }
 
-        public bool Register(RegisterUserViewModel register)
+        public bool Register(RegisterUserDto register)
         {
             return userRepository.Register(register);
         }
 
-        public bool UpdatePassword(int id, UpdatePasswordUserViewModel model)
+        public bool UpdatePassword(int id, UpdatePasswordDto model)
         {
             return userRepository.UpdatePassword(id, model);
         }
 
-        public bool UpdateRememberMe(int id, bool rememberMe)
-        {
-            return userRepository.UpdateRememberMe(id, rememberMe);
-        }
+        //public bool UpdateRememberMe(int id, bool rememberMe)
+        //{
+        //    return userRepository.UpdateRememberMe(id, rememberMe);
+        //}
 
-        public bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminViewModel model)
+        public bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model)
         {
             var user = GetUserById(id);
             if (model.Password == null)
@@ -103,6 +103,16 @@ namespace EShop.Application.Services
         {
             long remain = GetUserWallet(userId) - totalPrice;
             UpdateUserWallet(userId, remain);
+        }
+
+        public List<GetUserDto> GetAllNotCurrent(int currentId)
+        {
+            return userRepository.GetAllNotCurrent(currentId);
+        }
+
+        public GetUserOrdersDto GetUserOrders(int id)
+        {
+            return userRepository.GetUserOrders(id);
         }
     }
 }

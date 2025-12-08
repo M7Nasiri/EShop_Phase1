@@ -1,6 +1,7 @@
 using EShop.Application.Interfaces;
 using EShop.Application.Services;
-using EShop.Domain.ViewModels.ProductAgg;
+using EShop.Domain.Dtos.ProductAgg;
+using EShop.Web.ViewModels.ProductAgg;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
@@ -10,7 +11,7 @@ namespace EShop.Web.Pages.Product
     public class DetailsModel(ICartService cartService,IUserService userService,IProductService _productService) : PageModel
     {
         [BindProperty]
-        public ProductDetailsViewModel Product { get; set; }
+        public ProductDetailsDto Product { get; set; }
         public async Task OnGet(int id)
         {
             if (User.Identity.IsAuthenticated)

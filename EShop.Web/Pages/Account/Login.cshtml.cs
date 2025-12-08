@@ -1,8 +1,8 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Application.Services;
+using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Entities;
 using EShop.Domain.Enum;
-using EShop.Domain.ViewModels.UserAgg;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +14,7 @@ namespace EShop.Web.Pages.Account
     public class LoginModel(IUserService userService,ICartService cartService) : PageModel
     {
         [BindProperty]
-        public LoginUserViewModel model { get; set; }
+        public LoginUserDto model { get; set; }
 
         [Route("Login")]
         public void OnGet(string ReturnUrl = "/index")
@@ -51,7 +51,7 @@ namespace EShop.Web.Pages.Account
                     IsPersistent = model.RememberMe
                 };
                 HttpContext.SignInAsync(principal, properties);
-                userService.UpdateRememberMe(model.Id, model.RememberMe);
+                //userService.UpdateRememberMe(model.Id, model.RememberMe);
 
 
                 var guestCartCookie = Request.Cookies["guest_cart"];
@@ -80,7 +80,7 @@ namespace EShop.Web.Pages.Account
                 }
                 if (result.Role == RoleEnum.Admin)
                 {
-                    return RedirectToPage("/Admin/Index");
+                    return RedirectToPage("/Admin/ProductManagement");
                 }
             }
             //ModelState.AddModelError("", "نام کاربری یا رمز عبور اشتباه است.");

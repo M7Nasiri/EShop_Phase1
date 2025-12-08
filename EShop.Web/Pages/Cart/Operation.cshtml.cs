@@ -2,6 +2,7 @@
 using EShop.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 using System.Security.Claims;
 
 namespace EShop.Web.Pages.Cart
@@ -19,7 +20,7 @@ namespace EShop.Web.Pages.Cart
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.AddToUserCart(userId, dto.ProductId);
             var cartItems = await _cartService.GetUserCartItems(userId);
-
+            Log.Information("افزایش");
             return new JsonResult(new
             {
                 cartItems = cartItems.Select(c => new {
@@ -39,7 +40,7 @@ namespace EShop.Web.Pages.Cart
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.RemoveFromUserCart(userId, dto.ProductId);
             var cartItems = await _cartService.GetUserCartItems(userId);
-
+            Log.Warning("کاهش");
             return new JsonResult(new
             {
                 cartItems = cartItems.Select(c => new {
@@ -59,7 +60,7 @@ namespace EShop.Web.Pages.Cart
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.DeleteFromUserCart(userId, dto.ProductId);
             var cartItems = await _cartService.GetUserCartItems(userId);
-
+            Log.Warning("حذف");
             return new JsonResult(new
             {
                 cartItems = cartItems.Select(c => new {
@@ -78,7 +79,7 @@ namespace EShop.Web.Pages.Cart
 
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.RemoveAllItemRelatedToUser(userId);
-
+            Log.Error("پاک کردن");
             return new JsonResult(new { cartItems = new List<object>() });
 
     }

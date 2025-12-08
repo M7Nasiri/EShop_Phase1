@@ -12,6 +12,10 @@ namespace Infra.Data.Configurations
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasQueryFilter(u => !u.IsDelete);
+
+            builder.HasData(
+                new User { Id =1 , FullName = "Admin",Password="123",Role = EShop.Domain.Enum.RoleEnum.Admin,UserName="Admin",Credit=100000000
+                });
         }
     }
 }

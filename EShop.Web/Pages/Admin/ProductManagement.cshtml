@@ -1,0 +1,105 @@
+﻿@page "/Admin/PManagement"
+@model EShop.Web.Pages.Admin.ProductManagementModel
+@{
+    Layout = "_AdminPageLayout";
+    ViewData["Title"] = "لیست محصولات";
+}
+
+<div class="container mt-4" dir="rtl">
+    <div class="row mb-3">
+
+        <div class="col-2">
+            <div class="text-center">
+                <a asp-page="/Admin/UserManagement" class="btn btn-success btn-sm">مدیریت مشتریان</a>
+            </div>
+        </div>
+
+        <div class="col-10">
+
+            <div class="row mb-3">
+
+                <div class="col-6 text-center">
+                    <a asp-page="/Product/Create" class="btn btn-success btn-sm">ایجاد محصول</a>
+                </div>
+                <div class="col-6 text-center">
+                    <a asp-page="/CategoryP/Index" class="btn btn-primary btn-sm">دسته بندی</a>
+                </div>
+
+            </div>
+
+
+
+            <h3 class="mb-3">لیست محصولات</h3>
+
+            <table class="table table-bordered table-striped text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>عکس</th>
+                        <th>عنوان</th>
+                        <th>قیمت واحد</th>
+                        <th>موجودی</th>
+                        <th>امتیاز</th>
+                        <th>اسلایدر</th>
+                        <th>حذف شده</th>
+                        <th>دسته‌بندی</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.Products)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.ImagePath))
+                                {
+                                    <img src="@item.ImagePath" alt="@item.Title"
+                                         style="width:60px; height:60px; object-fit:cover; border-radius:6px;" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted">بدون تصویر</span>
+                                }
+                            </td>
+
+                            <td>@item.Title</td>
+                            <td>@item.UnitCost.ToString("N0") تومان</td>
+                            <td>@item.Stock</td>
+                            <td>@item.Rate</td>
+
+                            <td>
+                                @if (item.IsInSlider)
+                                {
+                                    <span class="badge bg-success">بله</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">خیر</span>
+                                }
+                            </td>
+
+                            <td>
+                                @if (item.IsDelete)
+                                {
+                                    <span class="badge bg-danger">بله</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">خیر</span>
+                                }
+                            </td>
+
+                            <td>@item.CategoryName</td>
+
+                            <td>
+                                <a asp-page="/Product/Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">ویرایش</a>
+                                <a asp-page="/Product/Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">حذف</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

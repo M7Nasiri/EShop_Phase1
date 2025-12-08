@@ -1,5 +1,5 @@
 ﻿using EShop.Application.Interfaces;
-using EShop.Domain.ViewModels.Checkout;
+using EShop.Domain.Dtos.Checkout;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;

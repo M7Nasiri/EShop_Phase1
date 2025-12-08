@@ -1,29 +1,31 @@
-﻿using EShop.Domain.Entities;
-using EShop.Domain.ViewModels.UserAgg;
+﻿using EShop.Domain.Dtos.UserAgg;
+using EShop.Domain.Entities;
 using System.Security.Claims;
 
 namespace EShop.Application.Interfaces
 {
     public interface IUserService
     {
-        List<GetUserViewModel> GetAll();
-        GetUserViewModel? GetUserById(int id);
-        GetUserViewModel? Login(LoginUserViewModel login);
-        bool Register(RegisterUserViewModel register);
+        List<GetUserDto> GetAll();
+        GetUserDto? GetUserById(int id);
+        GetUserDto? Login(LoginUserDto login);
+        bool Register(RegisterUserDto register);
         bool IsUserExist(string userName);
         bool Delete(int id);
-        bool UpdatePassword(int id, UpdatePasswordUserViewModel model);
+        bool UpdatePassword(int id, UpdatePasswordDto model);
         int FindIdByUserName(string userName);
-        bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminViewModel model);
-        bool UpdateRememberMe(int id, bool rememberMe);
-        int CreateUserByAdmin(int adminId, CreateUserByAdmin create);
-        bool DeleteUserByAdmin(int adminId, DeleteUserByAdmin delete);
+        bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model);
+       // bool UpdateRememberMe(int id, bool rememberMe);
+        int CreateUserByAdmin(int adminId, CreateUserByAdminDto create);
+        bool DeleteUserByAdmin(int adminId, DeleteUserByAdminDto delete);
 
-        List<UserInfoForAdmin> GetUserInfosForAdmin(int userId);
+        List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId);
         int GetCurrentUserId(ClaimsPrincipal user);
         long GetUserWallet(int userId);
         bool ISCreditSufficient(long credit, long cost);
         void DecreaseWallet(int userId, long totalPrice);
         void UpdateUserWallet(int userId, long remain);
+        List<GetUserDto> GetAllNotCurrent(int currentId);
+        GetUserOrdersDto GetUserOrders(int id);
     }
 }

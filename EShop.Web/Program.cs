@@ -2,18 +2,27 @@ using EShop.Application;
 using EShop.Application.Interfaces;
 using EShop.Application.Services;
 using EShop.Domain.Interfaces;
+using EShop.Web.Services;
 using Infra.Data.Persistence;
 using Infra.Data.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.UseSerilog ((context, configuration) =>
+{
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer("Server=LAPTOP-6U51JF85\\SQL2022;Database=Maktab135_HW_22;Trusted_Connection=True;TrustServerCertificate=True;"));
 builder.Services.AddAuthentication(options =>
@@ -40,6 +49,11 @@ builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ICheckoutService, CheckoutService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+
+
+builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IWorkWithProductImage, WorkWithProductImage>();
 
 
 

@@ -1,0 +1,29 @@
+﻿@page
+@model EShop.Web.Pages.CategoryP.CreateModel
+@{
+    Layout = "_AdminPageLayout";
+    ViewData["Title"] = "ایجاد دسته بندی جدید";
+}
+
+<div class="container mt-4">
+    <div class="card shadow p-4">
+
+        <h4 class="mb-4 text-primary">ایجاد دسته‌بندی جدید</h4>
+
+        <form method="post">
+
+            <div class="mb-3">
+                <label class="form-label">نام دسته‌بندی</label>
+                <input asp-for="Category.Title" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">توضیحات</label>
+                <textarea asp-for="Category.Description" class="form-control" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success px-4">ایجاد</button>
+            <a asp-page="/CategoryP/Index" class="btn btn-secondary px-4">بازگشت</a>
+        </form>
+    </div>
+</div>

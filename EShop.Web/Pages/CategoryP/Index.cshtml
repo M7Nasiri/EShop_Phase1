@@ -1,0 +1,52 @@
+﻿@page
+@model EShop.Web.Pages.CategoryP.IndexModel
+
+@{
+    Layout = "_AdminPageLayout";
+    ViewData["Title"] = "لیست دسته‌بندی‌ها";
+
+}
+<div class="row mb-3">
+
+    <div class="col-6 text-center">
+        <a asp-page="/CategoryP/Create" class="btn btn-success btn-sm">ایجاد دسته بندی</a>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header text-center bg-primary text-white">
+            <h4>لیست دسته‌بندی‌ها</h4>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-bordered table-striped text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>شناسه</th>
+                        <th>عنوان</th>
+                        <th>توضیحات</th>
+                        <th>عملیات</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.Categories)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Title</td>
+                            <td>@item.Description</td>
+                            <td>
+                                <a asp-page="/CategoryP/Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">ویرایش</a>
+
+                                <a asp-page="/CategoryP/Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">حذف</a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

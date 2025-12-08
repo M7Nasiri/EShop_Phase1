@@ -327,9 +327,6 @@ namespace Infra.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("RememberMe")
-                        .HasColumnType("bit");
-
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
@@ -340,6 +337,18 @@ namespace Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Credit = 100000000L,
+                            FullName = "Admin",
+                            IsDelete = false,
+                            Password = "123",
+                            Role = 1,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("EShop.Domain.Entities.UserCartItem", b =>

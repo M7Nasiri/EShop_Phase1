@@ -1,8 +1,5 @@
-﻿using EShop.Domain.Entities;
-using EShop.Domain.ViewModels.Checkout;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using EShop.Domain.Dtos.Checkout;
+using EShop.Domain.Entities;
 
 namespace EShop.Application.Interfaces
 {

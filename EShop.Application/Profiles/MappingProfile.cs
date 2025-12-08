@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using EShop.Application.Dtos;
+using EShop.Domain.Dtos.ProductAgg;
+using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Entities;
-using EShop.Domain.ViewModels.ProductAgg;
-using EShop.Domain.ViewModels.UserAgg;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,26 +13,27 @@ namespace EShop.Application.Profiles
     {
         public MappingProfile()
         {
-            CreateMap<Product, AddProductViewModel>().ReverseMap();
-            CreateMap<Product, DeleteProductViewModel>().ReverseMap();
+            CreateMap<Product, AddProductDto>().ReverseMap();
+            CreateMap<Product, DeleteProductDto>().ReverseMap();
+            CreateMap<ProductDetailsDto, DeleteProductDto>().ReverseMap();
 
-            CreateMap<Product, ProductDetailsViewModel>()
+            CreateMap<Product, ProductDetailsDto>()
                 .ForMember(d => d.CategoryName, opt => opt.MapFrom(src => src.Category.Title));
             
-            CreateMap<Product, ShowProductViewModel>()
+            CreateMap<Product, ShowProductDto>()
                 .ForMember(d=>d.CategoryName,opt=>opt.MapFrom(src=>src.Category.Title));
 
-            CreateMap<Product, UpdateProductViewModel>().ReverseMap();
+            CreateMap<Product, UpdateProductDto>().ReverseMap();
 
 
-            CreateMap<User,CreateUserByAdmin>().ReverseMap();
-            CreateMap<User,DeleteUserByAdmin>().ReverseMap();
-            CreateMap<User,GetUserViewModel>().ReverseMap();
-            CreateMap<User,LoginUserViewModel>().ReverseMap();
-            CreateMap<User,RegisterUserViewModel>().ReverseMap();
-            CreateMap<User,UpdatePasswordUserViewModel>().ReverseMap();
-            CreateMap<User,UpdateUserByAdminViewModel>().ReverseMap();
-            CreateMap<User,UserInfoForAdmin>().ReverseMap();
+            CreateMap<User,CreateUserByAdminDto>().ReverseMap();
+            CreateMap<User,DeleteUserByAdminDto>().ReverseMap();
+            CreateMap<User,GetUserDto>().ReverseMap();
+            CreateMap<User,LoginUserDto>().ReverseMap();
+            CreateMap<User,RegisterUserDto>().ReverseMap();
+            CreateMap<User,UpdatePasswordDto>().ReverseMap();
+            CreateMap<User,UpdateUserByAdminDto>().ReverseMap();
+            CreateMap<User,UserInfoForAdminDto>().ReverseMap();
 
             CreateMap<UserCartItem, CartItemDto>()
     .ForMember(d => d.ProductId, opt => opt.MapFrom(src => src.ProductId))

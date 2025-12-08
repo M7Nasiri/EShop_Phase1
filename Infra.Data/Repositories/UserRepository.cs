@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
-using EShop.Domain.ViewModels.UserAgg;
 using Infra.Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,7 +9,7 @@ namespace Infra.Data.Repositories
 {
     public class UserRepository(AppDbContext context, IMapper mapper) : IUserRepository
     {
-        public int CreateUserByAdmin(int adminId, CreateUserByAdmin create)
+        public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
         {
             var user = mapper.Map<User>(create);
             context.Add(user);
@@ -19,7 +19,7 @@ namespace Infra.Data.Repositories
 
         }
 
-        public bool DeleteUserByAdmin(int adminId, DeleteUserByAdmin delete)
+        public bool DeleteUserByAdmin(int adminId, DeleteUserByAdminDto delete)
         {
             var user = context.Users.FirstOrDefault(u => u.Id == delete.Id);
             if (user != null)
@@ -39,14 +39,14 @@ namespace Infra.Data.Repositories
             return context.Users.Where(u => u.UserName == userName).Select(u => u.Id).FirstOrDefault();
         }
 
-        public List<GetUserViewModel> GetAll()
+        public List<GetUserDto> GetAll()
         {
-            return mapper.Map<List<GetUserViewModel>>(context.Users.ToList());
+            return mapper.Map<List<GetUserDto>>(context.Users.Include(u => u.Orders).ToList());
         }
 
-        public GetUserViewModel? GetUserById(int id)
+        public GetUserDto? GetUserById(int id)
         {
-            return mapper.Map<GetUserViewModel>(context.Users.FirstOrDefault(u => u.Id == id));
+            return mapper.Map<GetUserDto>(context.Users.Include(u=>u.Orders).FirstOrDefault(u => u.Id == id));
         }
 
         public bool IsUserExist(string userName)
@@ -54,20 +54,17 @@ namespace Infra.Data.Repositories
             return context.Users.Any(u => u.UserName == userName);
         }
 
-        public GetUserViewModel? Login(LoginUserViewModel login)
+        public GetUserDto? Login(LoginUserDto login)
         {
             var user = context.Users.Where(u => u.UserName == login.UserName && u.Password == login.Password).FirstOrDefault();
             if (user != null)
             {
-                if (login.RememberMe)
-                    context.Users.Where(u => u.UserName == login.UserName)
-                        .ExecuteUpdate(setters => setters.SetProperty((u => u.RememberMe), true));
-                return mapper.Map<GetUserViewModel>(user);
+                return mapper.Map<GetUserDto>(user);
             }
             return null;
         }
 
-        public bool Register(RegisterUserViewModel register)
+        public bool Register(RegisterUserDto register)
         {
             var user = mapper.Map<User>(register);
             if (context.Users.Any(u => u.UserName == register.UserName))
@@ -76,19 +73,19 @@ namespace Infra.Data.Repositories
             return context.SaveChanges() > 0;
         }
 
-        public bool UpdatePassword(int id, UpdatePasswordUserViewModel model)
+        public bool UpdatePassword(int id, UpdatePasswordDto model)
         {
             return context.Users.Where(u => u.Id == id)
                         .ExecuteUpdate(setters => setters.SetProperty((u => u.Password), model.Password)) > 0;
         }
 
-        public bool UpdateRememberMe(int id, bool rememberMe)
-        {
-            return context.Users.Where(u => u.Id == id)
-                        .ExecuteUpdate(setters => setters.SetProperty((u => u.RememberMe), rememberMe)) > 0;
-        }
+        //public bool UpdateRememberMe(int id, bool rememberMe)
+        //{
+        //    return context.Users.Where(u => u.Id == id)
+        //                .ExecuteUpdate(setters => setters.SetProperty((u => u.RememberMe), rememberMe)) > 0;
+        //}
 
-        public bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminViewModel model)
+        public bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model)
         {
             return context.Users.Where(u => u.Id == id)
                          .ExecuteUpdate(setters => setters
@@ -97,9 +94,9 @@ namespace Infra.Data.Repositories
                          .SetProperty((u => u.Role), model.Role)) > 0;
         }
 
-        public List<UserInfoForAdmin> GetUserInfosForAdmin(int userId)
+        public List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId)
         {
-            return mapper.Map<List<UserInfoForAdmin>>(context.Users.Where(u => u.Id != userId)
+            return mapper.Map<List<UserInfoForAdminDto>>(context.Users.Where(u => u.Id != userId)
                 .ToList());
         }
 
@@ -112,6 +109,17 @@ namespace Infra.Data.Repositories
         {
             context.Users.Where(u => u.Id == userId).ExecuteUpdate(setters => setters
             .SetProperty((x => x.Credit), remain));
+        }
+
+        public List<GetUserDto> GetAllNotCurrent(int currentId)
+        {
+            return mapper.Map<List<GetUserDto>>(context.Users.Include(u=>u.Orders).Where(u=>u.Id !=currentId).ToList());
+        }
+
+        public GetUserOrdersDto GetUserOrders(int id)
+        {
+            return mapper.Map<GetUserOrdersDto>(context.Users.Include(u => u.Orders)
+                .ThenInclude(u => u.OrderItems).ThenInclude(oi=>oi.Product).Where(u => u.Id == id).FirstOrDefault());
         }
     }
 }

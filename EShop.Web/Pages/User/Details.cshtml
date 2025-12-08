@@ -1,0 +1,115 @@
+﻿@page
+@model EShop.Web.Pages.User.DetailsModel
+@using EShop.Application.Tools.Extension
+@{
+    Layout = "_AdminPageLayout";
+    ViewData["Title"] = "جزئیات سفارش مشتری";
+}
+
+
+<div class="mb-3">
+    <a asp-page="/Admin/UserManagement" class="btn btn-secondary px-4">بازگشت</a>
+</div>
+<div class="container mt-4" dir="rtl">
+
+    <h3 class="mb-4">سفارش‌های کاربر: @Model.UserDetails.UserName</h3>
+
+    <!-- جدول سفارش‌ها -->
+    <table class="table table-bordered table-hover text-center align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>شماره سفارش</th>
+                <th>تاریخ</th>
+                <th>وضعیت</th>
+                <th>جمع کل</th>
+                <th>جزئیات</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.UserDetails.Orders)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.CreateDate.ToPersianString("yyyy/MM/dd")</td>
+                    <td>
+                        @if (order.IsFinalized)
+                        {
+                            <span class="badge bg-success">پرداخت‌شده</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning">درانتظار پرداخت</span>
+                        }
+                    </td>
+                    <td>@order.TotalPrice.ToString("N0") تومان</td>
+                    <td>
+                        <button class="btn btn-info btn-sm text-white"
+                                data-bs-toggle="modal"
+                                data-bs-target="#orderModal-@order.Id">
+                            مشاهده
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<!-- ------------------------ -->
+<!--      MODALS              -->
+<!-- ------------------------ -->
+@foreach (var order in Model.UserDetails.Orders)
+{
+    var orderItems = order.OrderItems.Where(x => x.OrderId == order.Id).ToList();
+
+    <div class="modal fade" id="orderModal-@order.Id" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">جزئیات سفارش شماره @order.Id</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    @if (orderItems.Any())
+                    {
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-secondary">
+                                <tr>
+                                    <th>محصول</th>
+                                    <th>تعداد</th>
+                                    <th>قیمت واحد</th>
+                                    <th>قیمت کل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in orderItems)
+                                {
+                                    <tr>
+                                        <td>@item.Product.Title</td>
+                                        <td>@item.Amount</td>
+                                        <td>@item.UnitPrice.ToString("N0") تومان</td>
+                                        <td>@((item.UnitPrice * item.Amount).ToString("N0")) تومان</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">هیچ آیتمی برای این سفارش یافت نشد.</p>
+                    }
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

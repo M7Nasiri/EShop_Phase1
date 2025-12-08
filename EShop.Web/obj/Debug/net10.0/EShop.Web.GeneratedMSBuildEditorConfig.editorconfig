@@ -46,8 +46,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Admin/ProductManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdE1hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Admin/UserManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlck1hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Cart/Operation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydFxPcGVyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/CategoryP/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/CategoryP/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/CategoryP/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/CategoryP/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Error.cshtml]
@@ -86,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Shared/_AdminPageLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9BZG1pblBhZ2VMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Shared/_CustomLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DdXN0b21MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -100,6 +128,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/User/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/MaktabSharif/dev/projects/HW22/EShop/EShop.Web/Pages/_ViewImports.cshtml]

@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using EShop.Domain.common;
+using EShop.Domain.Dtos.ProductAgg;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
-using EShop.Domain.ViewModels.ProductAgg;
 using Infra.Data.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,25 +13,42 @@ namespace Infra.Data.Repositories
 {
     public class ProductRepository(AppDbContext _context,IMapper mapper) : IProductRepository
     {
-        public List<ShowProductViewModel> GetAllProductsForShow()
+        public int Create(AddProductDto dto)
         {
-            return mapper.Map<List<ShowProductViewModel>>(_context.Products.Include(p => p.Category).ToList());
+            var product = mapper.Map<Product>(dto);
+            _context.Products.Add(product);
+            return _context.SaveChanges();
         }
 
-        public ProductDetailsViewModel GetProductDetailsById(int id)
+        public void Delete(int id)
         {
-            return mapper.Map<ProductDetailsViewModel>(_context.Products.Include(p => p.Category).Where(p => p.Id == id)
+            _context.Products.Where(p=>p.Id == id).ExecuteUpdate(setters=>setters.SetProperty((p=>p.IsDelete),true));
+        }
+
+        public List<ShowProductDto> GetAllProductsForShow()
+        {
+            return mapper.Map<List<ShowProductDto>>(_context.Products.Include(p => p.Category).ToList());
+        }
+
+        public string GetImagePath(int id)
+        {
+            return _context.Products.Where(p => p.Id == id).Select(p => p.ImagePath).FirstOrDefault();
+        }
+
+        public ProductDetailsDto GetProductDetailsById(int id)
+        {
+            return mapper.Map<ProductDetailsDto>(_context.Products.Include(p => p.Category).Where(p => p.Id == id)
                 .FirstOrDefault());
         }
 
-        public List<ShowProductViewModel> GroupingByCategory(GroupingByCategory grouping)
+        public List<ShowProductDto> GroupingByCategory(GroupingByCategoryDto grouping)
         {
             IQueryable<Product> iQuery = _context.Products.Include(p => p.Category);
             if(grouping.CategoryId != 0)
             {
                 iQuery = iQuery.Where(p => p.CategoryId == grouping.CategoryId);
             }
-            return mapper.Map<List<ShowProductViewModel>>(iQuery);
+            return mapper.Map<List<ShowProductDto>>(iQuery);
         }
 
         public ResultDto<int> HasEnoughStock(int id,int sellingCount)
@@ -41,6 +58,18 @@ namespace Infra.Data.Repositories
             result.IsSuccess =  stock >= sellingCount;
             result.Data = stock;
             return result;
+        }
+
+        public void Update(int id, UpdateProductDto dto)
+        {
+            _context.Products.Where(propa => propa.Id == id).ExecuteUpdate(setters => setters
+            .SetProperty((p => p.Title), dto.Title)
+            .SetProperty((p => p.Description), dto.Description)
+            .SetProperty((p => p.ImagePath), dto.ImagePath)
+            .SetProperty((p => p.UnitCost), dto.UnitCost)
+            .SetProperty((p => p.Stock), dto.Stock)
+            .SetProperty((p => p.IsInSlider), dto.IsInSlider)
+            .SetProperty((p => p.CategoryId), dto.CategoryId));
         }
 
         public void UpdateStock(int id,int stock, int sellingCount)

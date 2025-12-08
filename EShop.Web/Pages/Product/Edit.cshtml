@@ -7,7 +7,7 @@
 <div class="card p-4 shadow-sm">
     <h4 class="mb-3">ویرایش محصول</h4>
 
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <input type="hidden" asp-for="Product.Id" />
 
@@ -22,8 +22,13 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">آدرس تصویر</label>
-            <input class="form-control" asp-for="Product.ImagePath" />
+            <label class="form-label">تصویر قدیمی</label>
+            <img src="@Model.Product.ImagePath" class="img-thumbnail" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">تصویر جدید</label>
+            <input type="file" class="form-control" asp-for="Product.ImageFile" />
         </div>
 
         <div class="mb-3">
@@ -36,13 +41,24 @@
             <input class="form-control" asp-for="Product.Stock" />
         </div>
 
+        <div class="form-group mb-3">
+            <label for="CategoryId">دسته‌بندی</label>
+            <select asp-for="Product.CategoryId" class="form-select mb-3">
+                @foreach (var cat in Model.Categories)
+                {
+                    <option value="@cat.Id">@cat.Title</option>
+                }
+            </select>
+        </div>
+
+
         <div class="form-check mb-3">
             <input type="checkbox" class="form-check-input" asp-for="Product.IsInSlider" />
             <label class="form-check-label">قرار گرفتن در اسلایدر</label>
         </div>
 
         <button class="btn btn-success">ویرایش</button>
-        <a href="/Products" class="btn btn-secondary">انصراف</a>
+        <a asp-page="/Admin/ProductManagement" class="btn btn-secondary">انصراف</a>
 
     </form>
 

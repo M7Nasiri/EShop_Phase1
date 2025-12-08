@@ -2,8 +2,9 @@
 using EShop.Application.Dtos;
 using EShop.Application.Interfaces;
 using EShop.Application.Services;
+using EShop.Domain.Dtos.ProductAgg;
 using EShop.Domain.Entities;
-using EShop.Domain.ViewModels.ProductAgg;
+using EShop.Web.ViewModels.ProductAgg;
 using Infra.Data.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,7 +16,7 @@ namespace EShop.Web.Pages
         ,ICategoryService _categoryService) : PageModel
     {
         [BindProperty]
-        public List<ShowProductViewModel> Products { get; set; }
+        public List<ShowProductDto> Products { get; set; }
         [BindProperty]
         public List<CartItemDto> CartItems { get; set; }
 
@@ -23,7 +24,7 @@ namespace EShop.Web.Pages
         public List<Category> Categories { get; set; }
 
         [BindProperty]
-        public GroupingByCategory Group { get; set; }
+        public GroupingByCategoryDto Group { get; set; }
         [BindProperty]
         public int UserId { get; set; }
         public async Task OnGet()

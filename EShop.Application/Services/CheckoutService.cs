@@ -1,10 +1,11 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
-using EShop.Domain.ViewModels.Checkout;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using EShop.Domain.Dtos;
+using EShop.Domain.Dtos.Checkout;
 
 namespace EShop.Application.Services
 {

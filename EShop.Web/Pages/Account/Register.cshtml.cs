@@ -1,5 +1,5 @@
 ﻿using EShop.Application.Interfaces;
-using EShop.Domain.ViewModels.UserAgg;
+using EShop.Domain.Dtos.UserAgg;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -8,7 +8,7 @@ namespace EShop.Web.Pages.Account
     public class RegisterModel(IUserService userService) : PageModel
     {
         [BindProperty]
-        public RegisterUserViewModel model { get; set; }
+        public RegisterUserDto model { get; set; }
         public void OnGet()
         {
         }

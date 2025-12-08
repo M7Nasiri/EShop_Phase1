@@ -1,7 +1,6 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
-using EShop.Domain.ViewModels.Checkout;
 using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;

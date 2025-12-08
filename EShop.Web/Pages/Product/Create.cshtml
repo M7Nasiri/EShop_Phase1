@@ -7,7 +7,7 @@
 <div class="card p-4 shadow-sm">
     <h4 class="mb-3">افزودن محصول جدید</h4>
 
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
             <label class="form-label">عنوان</label>
@@ -20,13 +20,13 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">آدرس تصویر</label>
-            <input class="form-control" asp-for="Product.ImagePath" />
+            <label class="form-label">تصویر</label>
+            <input type="file" class="form-control" asp-for="Product.ImageFile" />
         </div>
 
         <div class="mb-3">
             <label class="form-label">قیمت</label>
-            <input class="form-control" asp-for="Product.UnitCost" />
+            <input  class="form-control" asp-for="Product.UnitCost" />
         </div>
 
         <div class="mb-3">
@@ -39,7 +39,17 @@
             <label class="form-check-label">محصول در اسلایدر قرار بگیرد</label>
         </div>
 
-        <button class="btn btn-primary">ثبت</button>
+        <div class="form-group mb-3">
+            <label for="CategoryId">دسته‌بندی</label>
+            <select asp-for="Product.CategoryId" class="form-select mb-3">
+                @foreach (var cat in Model.Categories)
+                {
+                    <option value="@cat.Id">@cat.Title</option>
+                }
+            </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">ثبت</button>
 
     </form>
 </div>
