@@ -7,7 +7,7 @@ using System.Security.Claims;
 
 namespace EShop.Web.Pages.Order
 {
-    [Authorize(Roles ="NormalUser")]
+    [Authorize(Roles = "Admin,NormalUser")]
     public class CheckoutModel(ICartService _cartService,ICheckoutService _checkoutService,IUserService _userService,
         IOrderService _orderService) : PageModel
     {

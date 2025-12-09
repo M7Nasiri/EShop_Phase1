@@ -1,10 +1,12 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace EShop.Web.Pages.Order
 {
+    [Authorize(Roles = "Admin,NormalUser")]
     public class FinalModel(IOrderService _orderService) : PageModel
     {
         public bool IsSuccess { get; set; }

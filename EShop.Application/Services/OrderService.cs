@@ -1,5 +1,6 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.common;
+using EShop.Domain.Dtos.OrderAgg;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
 using System;
@@ -75,6 +76,20 @@ namespace EShop.Application.Services
         {
             return await _orderRepository.GetOrderById(orderId);
         }
-        
+
+        public async Task<bool> ShippededOrder(int orderId)
+        {
+            return await _orderRepository.ShippededOrder(orderId);
+        }
+
+        public async Task<List<GetOrderDto>> GetAll()
+        {
+            return await _orderRepository.GetAll();
+        }
+
+        public async Task<GetOrderDto> Get(int id)
+        {
+            return await _orderRepository.Get(id);
+        }
     }
 }

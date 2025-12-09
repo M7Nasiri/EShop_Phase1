@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EShop.Application.Dtos;
+using EShop.Domain.Dtos.OrderAgg;
 using EShop.Domain.Dtos.ProductAgg;
 using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Entities;
@@ -34,6 +35,10 @@ namespace EShop.Application.Profiles
             CreateMap<User,UpdatePasswordDto>().ReverseMap();
             CreateMap<User,UpdateUserByAdminDto>().ReverseMap();
             CreateMap<User,UserInfoForAdminDto>().ReverseMap();
+
+            CreateMap<Order, GetOrderDto>()
+                .ForMember(d => d.UserName, opt => opt.MapFrom(s => s.User.UserName));
+
 
             CreateMap<UserCartItem, CartItemDto>()
     .ForMember(d => d.ProductId, opt => opt.MapFrom(src => src.ProductId))

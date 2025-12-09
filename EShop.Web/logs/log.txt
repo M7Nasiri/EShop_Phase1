@@ -220,3 +220,85 @@ System.InvalidOperationException: No page named '/Admin/Index' matches the suppl
 2025-12-08 16:38:18.449 +03:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
 2025-12-08 16:42:08.353 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
 2025-12-08 16:42:21.971 +03:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-12-08 21:54:21.397 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 21:54:43.176 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 21:54:54.188 +03:30 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[CreateDate], [o].[GuestId], [o].[IsDelete], [o].[IsFinalized], [o].[Status], [o].[TotalPrice], [o].[UserId], [s0].[Id], [s0].[Amount], [s0].[OrderId], [s0].[ProductId], [s0].[UnitPrice], [s0].[Id0], [s0].[CategoryId], [s0].[Description], [s0].[ImagePath], [s0].[IsDelete], [s0].[IsInSlider], [s0].[Rate], [s0].[Stock], [s0].[Title], [s0].[UnitCost], [s0].[Id1], [s0].[Id00]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[Amount], [o0].[OrderId], [o0].[ProductId], [o0].[UnitPrice], [s].[Id] AS [Id0], [s].[CategoryId], [s].[Description], [s].[ImagePath], [s].[IsDelete], [s].[IsInSlider], [s].[Rate], [s].[Stock], [s].[Title], [s].[UnitCost], [o2].[Id] AS [Id1], [s].[Id0] AS [Id00]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN (
+        SELECT [o1].[Id], [o1].[IsDelete]
+        FROM [Orders] AS [o1]
+        WHERE [o1].[IsDelete] = CAST(0 AS bit)
+    ) AS [o2] ON [o0].[OrderId] = [o2].[Id]
+    INNER JOIN (
+        SELECT [p].[Id], [p].[CategoryId], [p].[Description], [p].[ImagePath], [p].[IsDelete], [p].[IsInSlider], [p].[Rate], [p].[Stock], [p].[Title], [p].[UnitCost], [c0].[Id] AS [Id0]
+        FROM [Products] AS [p]
+        INNER JOIN (
+            SELECT [c].[Id], [c].[IsDelete]
+            FROM [Cateogries] AS [c]
+            WHERE [c].[IsDelete] = CAST(0 AS bit)
+        ) AS [c0] ON [p].[CategoryId] = [c0].[Id]
+        WHERE [c0].[IsDelete] = CAST(0 AS bit) AND [p].[IsDelete] = CAST(0 AS bit)
+    ) AS [s] ON [o0].[ProductId] = [s].[Id]
+    WHERE [o2].[IsDelete] = CAST(0 AS bit)
+) AS [s0] ON [o].[Id] = [s0].[OrderId]
+WHERE [o].[IsDelete] = CAST(0 AS bit)
+ORDER BY [o].[Id], [s0].[Id], [s0].[Id1], [s0].[Id0]
+2025-12-08 21:54:54.202 +03:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Infra.Data.Persistence.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Status'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:0aa12b30-456e-43f2-bb81-d377bd4d7313
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Status'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:0aa12b30-456e-43f2-bb81-d377bd4d7313
+Error Number:207,State:1,Class:16
+2025-12-08 21:55:29.226 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 21:55:43.318 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 21:59:33.277 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:03:11.788 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:05:19.220 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:08:12.221 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:09:19.123 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:09:44.516 +03:30 [ERR] Failed executing DbCommand (14ms) [Parameters=[@p='?' (DbType = Int32), @orderId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE [o]
+SET [o].[Status] = @p
+FROM [Orders] AS [o]
+WHERE [o].[IsDelete] = CAST(0 AS bit) AND [o].[Id] = @orderId
+2025-12-08 22:10:13.015 +03:30 [INF] افزایش
+2025-12-08 22:10:18.166 +03:30 [INF] افزایش
+2025-12-08 22:10:23.356 +03:30 [INF] افزایش
+2025-12-08 22:12:29.412 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 22:12:53.008 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:08:22.436 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:09:07.242 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:16:04.339 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:20:41.147 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:21:26.621 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:22:33.842 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 00:23:14.961 +03:30 [WRN] Entity 'Product' has a global query filter defined and is the required end of a relationship with the entity 'UserCartItem'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.

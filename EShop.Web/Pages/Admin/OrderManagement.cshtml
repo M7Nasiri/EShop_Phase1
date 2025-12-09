@@ -1,0 +1,140 @@
+﻿@page "/Admin/OManagement"
+@model EShop.Web.Pages.Admin.OrderManagementModel
+@using EShop.Application.Tools.Extension
+@using EShop.Domain.Enum
+@{
+    Layout = "_AdminPageLayout";
+    ViewData["Title"] = "مدیریت سفارش‌ها";
+}
+<div asp-validation-summary="All" class="text-danger"></div>
+<div class="container mt-4" dir="rtl">
+
+    <h3 class="mb-4">لیست سفارش‌ها</h3>
+
+    <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>شماره سفارش</th>
+                <th>کاربر</th>
+                <th>تاریخ</th>
+                <th>وضعیت پرداخت</th>
+                <th>وضعیت سفارش</th>
+                <th>جمع کل</th>
+                <th>جزئیات</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var order in Model.Orders)
+        {
+            <tr>
+                <td>@order.Id</td>
+                <td>@order.UserName</td>
+                <td>@order.CreateDate.ToPersianString("yyyy/MM/dd")</td>
+
+                <!-- وضعیت پرداخت -->
+                <td>
+                    @if (order.IsFinalized)
+                    {
+                        <span class="badge bg-success">پرداخت شده</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">در انتظار پرداخت</span>
+                    }
+                </td>
+
+                <!-- وضعیت سفارش -->
+                <td>
+                    @switch (order.Status)
+                    {
+                        case OrderStatus.Pending:
+                            <span class="badge bg-secondary">در انتظار تأیید</span>;
+                            break;
+
+                        case OrderStatus.Paid:
+                            <span class="badge bg-primary">پرداخت شده</span>;
+                            break;
+
+                        case OrderStatus.Shipped:
+                            <span class="badge bg-info text-dark">ارسال شده</span>;
+                            break;
+                    }
+                </td>
+
+                <td>@order.TotalPrice.ToString("N0") تومان</td>
+
+                <td>
+                    <button class="btn btn-info btn-sm text-white"
+                            data-bs-toggle="modal"
+                            data-bs-target="#orderModal-@order.Id">
+                        مشاهده
+                    </button>|<a asp-page="/Admin/OrderManagement" asp-page-handler="Shipped" asp-route-id="@order.Id" class="btn btn-sm btn-success">ارسال محصول</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+
+<!-- -------------------------------------- -->
+<!--               MODALS                  -->
+<!-- -------------------------------------- -->
+
+@foreach (var order in Model.Orders)
+{
+    <div class="modal fade" id="orderModal-@order.Id" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">جزئیات سفارش شماره @order.Id</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    @if (order.OrderItems != null && order.OrderItems.Any())
+                    {
+                        <table class="table table-bordered text-center align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>محصول</th>
+                                    <th>تعداد</th>
+                                    <th>قیمت واحد</th>
+                                    <th>قیمت کل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach (var item in order.OrderItems)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Product?.Title
+                                        @if (!string.IsNullOrEmpty(item.Product?.ImagePath))
+                                        {
+                                            <img src="@item.Product.ImagePath"
+                                                 style="width:40px;height:40px;object-fit:cover;border-radius:6px;margin-right:8px;" />
+                                        }
+                                    </td>
+                                    <td>@item.Amount</td>
+                                    <td>@item.UnitPrice.ToString("N0") تومان</td>
+                                    <td>@((item.UnitPrice * item.Amount).ToString("N0")) تومان</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <p class="text-muted text-center">هیچ آیتمی برای این سفارش وجود ندارد.</p>
+                    }
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
