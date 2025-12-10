@@ -1,8 +1,11 @@
-﻿namespace EShop.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EShop.Domain.Entities
 {
     public class Category
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "عنوان الزامی است"), MaxLength(100)]
         public string Title { get; set; }
         public string? Description { get; set; }
         public IList<Product>? Products { get; set; }

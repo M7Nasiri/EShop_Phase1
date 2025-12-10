@@ -41,6 +41,11 @@ namespace Infra.Data.Repositories
                 .FirstOrDefault());
         }
 
+        public string GetProductName(int id)
+        {
+            return _context.Products.Where(p => p.Id == id).Select(p => p.Title).FirstOrDefault();
+        }
+
         public List<ShowProductDto> GroupingByCategory(GroupingByCategoryDto grouping)
         {
             IQueryable<Product> iQuery = _context.Products.Include(p => p.Category);

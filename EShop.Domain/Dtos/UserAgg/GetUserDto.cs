@@ -11,7 +11,7 @@ namespace EShop.Domain.Dtos.UserAgg
         public string FullName { get; set; }
 
         public RoleEnum Role { get; set; }
-        public List<Order> Orders { get; set; }
+        public List<Order>? Orders { get; set; }
         public int Credit { get; set; }
     }
 }

@@ -1,13 +1,16 @@
-using EShop.Application;
+﻿using EShop.Application;
 using EShop.Application.Interfaces;
 using EShop.Application.Services;
 using EShop.Domain.Interfaces;
+using EShop.Web.Middlewares;
 using EShop.Web.Services;
 using Infra.Data.Persistence;
 using Infra.Data.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Serilog.Events;
+using Serilog.Sinks.MSSqlServer;
 using System;
 using System.Reflection;
 
@@ -18,13 +21,52 @@ builder.Host.UseSerilog ((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration);
 });
 // Add services to the container.
+
+
+#region Config Serilog
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+
+    // Info → Seq
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Information)
+        .WriteTo.Seq("http://localhost:5341"))
+
+    // Error → File
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error)
+        .WriteTo.File(@"C:\ApplicationLog\log-.txt", rollingInterval: RollingInterval.Day))
+
+// Warning → SQL Server
+.WriteTo.Logger(lc => lc
+    .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Warning)
+    .WriteTo.MSSqlServer(
+        connectionString: builder.Configuration.GetConnectionString("LogConnectionString"),
+        sinkOptions: new MSSqlServerSinkOptions
+        {
+            TableName = "Logs",
+            AutoCreateSqlTable = true,
+            BatchPostingLimit = 100,
+            BatchPeriod = TimeSpan.FromSeconds(2)
+        },
+        columnOptions: null
+    ))
+
+    .CreateBootstrapLogger();
+
+builder.Host.UseSerilog();
+#endregion /Config Serilog
+
+
+
 builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession();
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlServer("Server=LAPTOP-6U51JF85\\SQL2022;Database=Maktab135_HW_22;Trusted_Connection=True;TrustServerCertificate=True;"));
+options.UseSqlServer(builder.Configuration.GetConnectionString("AppConnectionString")));
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -80,6 +122,11 @@ app.UseAuthorization();
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
+
+
+app.UseMiddleware<LoggingMiddleware>();
+
+
 
 app.Run();
 

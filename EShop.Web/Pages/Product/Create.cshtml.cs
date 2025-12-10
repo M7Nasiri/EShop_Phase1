@@ -23,6 +23,11 @@ namespace EShop.Web.Pages.Product
 
         public IActionResult OnPost()
         {
+            if (!ModelState.IsValid)
+            {
+                Categories = _categoryService.GetAll();
+                return Page();
+            }
             var path = _wImage.Upload(Product.ImageFile);
             var dto = new AddProductDto
             {

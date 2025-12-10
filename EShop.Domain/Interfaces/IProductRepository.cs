@@ -20,5 +20,6 @@ namespace EShop.Domain.Interfaces
         string GetImagePath(int id);
 
         int Create(AddProductDto dto);
+        public string GetProductName(int id);
     }
 }

@@ -1,12 +1,13 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Interfaces;
+using Microsoft.Extensions.Logging;
 using System.Security.Claims;
-using System.Security.Cryptography;
+
 
 namespace EShop.Application.Services
 {
-    public class UserService(IUserRepository userRepository) : IUserService
+    public class UserService(IUserRepository userRepository,ILogger<UserService> _logger) : IUserService
     {
         public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
         {
@@ -102,6 +103,10 @@ namespace EShop.Application.Services
         public void DecreaseWallet(int userId, long totalPrice)
         {
             long remain = GetUserWallet(userId) - totalPrice;
+            if(remain < 10000)
+            {
+                _logger.LogWarning("موجودی کیف پول کاربر به کمتر از ده هزار توامن رسیده است");
+            }
             UpdateUserWallet(userId, remain);
         }
 

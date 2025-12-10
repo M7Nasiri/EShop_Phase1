@@ -5,7 +5,7 @@
 @using Microsoft.AspNetCore.Antiforgery
 @inject IAntiforgery antiforgery
 @{
-    Layout = null;
+    Layout = "";
 
 }
 
@@ -77,9 +77,13 @@
         window.userIsLoggedIn = @(User.Identity.IsAuthenticated.ToString().ToLower());
     </script>
 
-    <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

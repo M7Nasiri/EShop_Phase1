@@ -3,6 +3,7 @@ using EShop.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 
 namespace EShop.Web.Pages.Order
 {
@@ -21,6 +22,7 @@ namespace EShop.Web.Pages.Order
             {
                 IsSuccess = false;
                 Message = "شناسه سفارش معتبر نیست یا پرداخت انجام نشده است.";
+                Log.Information($"In Final Page : {Message}");
                 return Page();
             }
 
@@ -29,6 +31,7 @@ namespace EShop.Web.Pages.Order
             {
                 IsSuccess = false;
                 Message = "سفارشی با این شناسه یافت نشد.";
+                Log.Information($"In Final Page : {Message}");
                 return Page();
             }
 
@@ -38,7 +41,7 @@ namespace EShop.Web.Pages.Order
             Items = order.OrderItems;
             TotalPrice = Items.Sum(x => x.UnitPrice * x.Amount);
             Message = "پرداخت شما با موفقیت انجام شد.";
-
+            Log.Information($"In Final Page : {Message}");
             return Page();
         }
     }

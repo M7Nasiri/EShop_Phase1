@@ -20,7 +20,7 @@ namespace EShop.Web.Pages.Cart
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.AddToUserCart(userId, dto.ProductId);
             var cartItems = await _cartService.GetUserCartItems(userId);
-            Log.Information("افزایش");
+            Log.Warning("افزایش");
             return new JsonResult(new
             {
                 cartItems = cartItems.Select(c => new {
@@ -79,7 +79,7 @@ namespace EShop.Web.Pages.Cart
 
             int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
             await _cartService.RemoveAllItemRelatedToUser(userId);
-            Log.Error("پاک کردن");
+            Log.Warning("پاک کردن");
             return new JsonResult(new { cartItems = new List<object>() });
 
     }

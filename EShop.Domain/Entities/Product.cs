@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace EShop.Domain.Entities
@@ -7,6 +8,7 @@ namespace EShop.Domain.Entities
     public class Product
     {
         public int Id { get; set; }
+        [Required(ErrorMessage = "عنوان الزامی است")]
         public string Title { get; set; }
         public string? Description { get; set; }
         public string? ImagePath { get; set; }

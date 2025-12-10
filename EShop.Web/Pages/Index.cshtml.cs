@@ -8,6 +8,7 @@ using EShop.Web.ViewModels.ProductAgg;
 using Infra.Data.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 using System.Security.Claims;
 
 namespace EShop.Web.Pages
@@ -15,6 +16,7 @@ namespace EShop.Web.Pages
     public class IndexModel(IProductService _productService,IMapper mapper,ICartService _cartService
         ,ICategoryService _categoryService) : PageModel
     {
+
         [BindProperty]
         public List<ShowProductDto> Products { get; set; }
         [BindProperty]
@@ -27,10 +29,14 @@ namespace EShop.Web.Pages
         public GroupingByCategoryDto Group { get; set; }
         [BindProperty]
         public int UserId { get; set; }
+
         public async Task OnGet()
         {
             Products = _productService.GetAllProductsForShow();
             Categories = _categoryService.GetAll();
+            Log.Information("Information : Load Index Page");
+            Log.Error("Error : Load Index Page");
+            Log.Warning("Warning : Load Index Page");
             if (User.Identity.IsAuthenticated)
             {
                 UserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);

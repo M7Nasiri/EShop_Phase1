@@ -14,7 +14,7 @@ namespace EShop.Domain.Dtos.ProductAgg
         public long UnitCost { get; set; }
         public int Stock { get; set; }
         public bool IsInSlider { get; set; }
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
         public int CategoryId { get; set; }
     }
 }

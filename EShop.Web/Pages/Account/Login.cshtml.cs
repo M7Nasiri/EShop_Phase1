@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 using System.Security.Claims;
 using System.Text.Json;
 namespace EShop.Web.Pages.Account
@@ -76,10 +77,12 @@ namespace EShop.Web.Pages.Account
 
                 if (result.Role == RoleEnum.NormalUser)
                 {
+                    Log.Information("User Logged in");
                     return RedirectToPage("/Index");
                 }
                 if (result.Role == RoleEnum.Admin)
                 {
+                    Log.Information("Admin Logged in");
                     return RedirectToPage("/Admin/ProductManagement");
                 }
             }

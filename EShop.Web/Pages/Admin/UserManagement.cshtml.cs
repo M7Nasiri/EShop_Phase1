@@ -17,7 +17,8 @@ namespace EShop.Web.Pages.Admin
         public void OnGet()
         {
             var userId = Int32.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            Users = _mapper.Map<List<UserInfoForAdminDto>>(_userService.GetAllNotCurrent(userId));
+            Users = _mapper.Map<List<UserInfoForAdminDto>>(_userService.GetAll());
+           // Users = _mapper.Map<List<UserInfoForAdminDto>>(_userService.GetAllNotCurrent(userId));
         }
     }
 }

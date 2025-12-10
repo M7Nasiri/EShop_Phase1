@@ -12,7 +12,7 @@ namespace EShop.Domain.Dtos.UserAgg
         public int Id { get; set; }
         public string UserName { get; set; }
 
-        public List<Order> Orders { get; set; }
+        public List<Order>? Orders { get; set; }
         public int Credit { get; set; }
     }
 }

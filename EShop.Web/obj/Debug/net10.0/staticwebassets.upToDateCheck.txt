@@ -66,11 +66,14 @@ D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Web\wwwroot\lib\bootstrap\dist\js\
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Web\wwwroot\lib\jquery\dist\jquery.slim.min.js
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Web\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\Files\Products\0bcb957e-c7cd-4266-979b-0e1db6406992.jpg
 wwwroot\Files\Products\1.jpg
 wwwroot\Files\Products\10.jpg
+wwwroot\Files\Products\16c2a71f-1313-4824-8f1d-d7dba5e3dc30.jpg
 wwwroot\Files\Products\2.jpg
 wwwroot\Files\Products\3.jpg
 wwwroot\Files\Products\4.jpg
+wwwroot\Files\Products\45321ecb-8f1d-4c70-8236-3c40d37b94cf.jpg
 wwwroot\Files\Products\5.jpg
 wwwroot\Files\Products\6.jpg
 wwwroot\Files\Products\7.jpg
@@ -78,7 +81,9 @@ wwwroot\Files\Products\8.jpg
 wwwroot\Files\Products\88105de6-9c81-4832-800d-e15e4ec48efd.jpg
 wwwroot\Files\Products\9.jpg
 wwwroot\Files\Products\95cc3385-66bd-4bc0-ba33-7c642d39eaf1.jpg
+wwwroot\Files\Products\ada766ba-e9be-4824-82e5-cf73c008f03c.jpg
 wwwroot\Files\Products\aeed3732-c6d7-440b-aa76-411382712c61.jpg
+wwwroot\Files\Products\e1c936ee-2c7a-459d-bcd1-897c982cd6ea.jpg
 wwwroot\Files\Products\watch1.jpg
 wwwroot\Files\Products\watch2.jpg
 wwwroot\Products\1.jpg

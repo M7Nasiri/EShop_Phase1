@@ -35,6 +35,10 @@ namespace EShop.Web.Pages.Product
 
         public IActionResult OnPost(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             var path = _wImage.Upload(Product.ImageFile,id);
             var dto = new UpdateProductDto
             {

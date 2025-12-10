@@ -2,6 +2,7 @@
 using EShop.Domain.Dtos.UserAgg;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 
 namespace EShop.Web.Pages.Account
 {
@@ -21,6 +22,7 @@ namespace EShop.Web.Pages.Account
             }
             if (userService.Register(model))
             {
+                Log.Information("User registered");
                 return RedirectToPage("/Account/Login");
             }
             else

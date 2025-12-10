@@ -1,11 +1,10 @@
 ﻿using EShop.Application.Interfaces;
 using EShop.Domain.common;
 using EShop.Domain.Dtos.OrderAgg;
+using EShop.Domain.Dtos.UserAgg;
 using EShop.Domain.Entities;
 using EShop.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace EShop.Application.Services
 {
@@ -79,7 +78,12 @@ namespace EShop.Application.Services
 
         public async Task<bool> ShippededOrder(int orderId)
         {
-            return await _orderRepository.ShippededOrder(orderId);
+            var res =  await _orderRepository.ShippededOrder(orderId);
+            if (!res)
+            {
+                throw new Exception("برای ارسال محصول ، پرداخت باید انجام شده باشد");
+            }
+            return res;
         }
 
         public async Task<List<GetOrderDto>> GetAll()

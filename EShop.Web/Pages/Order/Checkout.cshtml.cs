@@ -3,6 +3,7 @@ using EShop.Domain.Dtos.Checkout;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Serilog;
 using System.Security.Claims;
 
 namespace EShop.Web.Pages.Order
@@ -46,6 +47,7 @@ namespace EShop.Web.Pages.Order
             var checkRes = await _orderService.CheckOrder(userId, cart);
             if (!checkRes.IsSuccess)
             {
+                Log.Information($"Checkout Page : {checkRes.Message}");
                 return new JsonResult(new
                 {
                     success = false,
@@ -55,7 +57,7 @@ namespace EShop.Web.Pages.Order
 
 
             int orderId = await _orderService.Finalized(userId, cart, checkRes.Data);
-
+            Log.Information($"Order {orderId} is finalized!");
             return new JsonResult(new { success = true, orderId });
         }
     }

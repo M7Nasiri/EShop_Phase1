@@ -21,18 +21,22 @@
         <label for="Role">دسته‌بندی</label>
         <select class="form-control" asp-for="model.Role">
             <option value="0">کاربر عادی</option>
-            <option value="1">نویسنده</option>
+            <option value="1">مدیر</option>
         </select>
     </div>
     
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">رمز عبور</label>
+        <label class="form-label">رمز عبور</label>
         <input type="password" asp-for="model.Password" class="form-control" />
+        <span asp-validation-for="model.Password" class="text-danger"></span>
     </div>
+
     <div class="mb-3">
-        <label class="form-label"> تکرار رمز عبور</label>
+        <label class="form-label">تکرار رمز عبور</label>
         <input type="password" asp-for="model.RePassword" class="form-control" />
+        <span asp-validation-for="model.RePassword" class="text-danger"></span>
     </div>
+
 
     <button type="submit" class="btn btn-success">ثبت نام</button>
     <div class="form-group">

@@ -9,7 +9,6 @@ namespace EShop.Web.Pages.Product
 {
     public class DeleteModel(IProductService _productService,IMapper _mapper) : PageModel
     {
-        [BindProperty]
         public DeleteProductDto Product { get; set; }
 
         [BindProperty]
@@ -21,9 +20,13 @@ namespace EShop.Web.Pages.Product
             Product = _mapper.Map<DeleteProductDto>(_productService.GetProductDetailsById(id));
         }
 
-        public IActionResult OnPost(int id)
+        public IActionResult OnPost()
         {
-            _productService.Delete(id);
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            _productService.Delete(ProductId);
             return RedirectToPage("/Admin/ProductManagement");
         }
     }

@@ -15,6 +15,10 @@ namespace EShop.Web.Pages.CategoryP
         }
         public IActionResult OnPost(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
             _categoryService.Update(id, Category);
             return RedirectToPage("/CategoryP/Index");
         }
