@@ -8,7 +8,7 @@ namespace EShop.Domain.Dtos.UserAgg
 {
     public class ShowUserPrfofileDto
     {
-        public int Id { get; set; }
+        public int IdentityUserId { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
         public UserInfoDto UserInfo { get; set; }

@@ -1,6 +1,7 @@
 ﻿using EShop.Domain.Enum;
 using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Security.Principal;
 
 namespace EShop.Domain.Entities
@@ -8,9 +9,10 @@ namespace EShop.Domain.Entities
     public class User
     {
 
-        public int Id { get; set; }
+        //public int Id { get; set; }
+        [Key]
         public int IdentityUserId { get; set; }
-
+        [ForeignKey(nameof(IdentityUserId))]
         public IdentityUser<int> IdentityUser { get; set; }
         public string UserName { get; set; }
        // public string Password { get; set; }

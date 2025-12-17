@@ -26,32 +26,36 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var order in Model.UserDetails.Orders)
+            @if(Model.UserDetails.Orders != null && Model.UserDetails.Orders.Any())
             {
-                <tr>
-                    <td>@order.Id</td>
-                    <td>@order.CreateDate.ToPersianString("yyyy/MM/dd")</td>
-                    <td>
-                        @if (order.IsFinalized)
-                        {
-                            <span class="badge bg-success">پرداخت‌شده</span>
-                        }
-                        else
-                        {
-                            <span class="badge bg-warning">درانتظار پرداخت</span>
-                        }
-                    </td>
-                    <td>@order.TotalPrice.ToString("N0") تومان</td>
-                    <td>
-                        <button class="btn btn-info btn-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#orderModal-@order.Id">
-                            مشاهده
-                        </button>
-                    </td>
-                </tr>
+                @foreach (var order in Model.UserDetails.Orders)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>@order.CreateDate.ToPersianString("yyyy/MM/dd")</td>
+                        <td>
+                            @if (order.IsFinalized)
+                            {
+                                <span class="badge bg-success">پرداخت‌شده</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-warning">درانتظار پرداخت</span>
+                            }
+                        </td>
+                        <td>@order.TotalPrice.ToString("N0") تومان</td>
+                        <td>
+                            <button class="btn btn-info btn-sm text-white"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#orderModal-@order.Id">
+                                مشاهده
+                            </button>
+                        </td>
+                    </tr>
+                }
+
             }
-        </tbody>
+                   </tbody>
     </table>
 </div>
 

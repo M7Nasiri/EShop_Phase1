@@ -16,7 +16,7 @@ namespace EShop.Domain.Interfaces
         int FindIdByUserName(string userName);
         bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model);
         //bool UpdateRememberMe(int id, bool rememberMe);
-        int CreateUserByAdmin(int adminId, CreateUserByAdminDto create);
+       // int CreateUserByAdmin(int adminId, CreateUserByAdminDto create);
         bool DeleteUserByAdmin(int adminId, DeleteUserByAdminDto delete);
         List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId);
         long GetUserWallet(int userId);

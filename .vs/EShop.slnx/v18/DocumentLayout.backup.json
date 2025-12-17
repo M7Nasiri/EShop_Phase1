@@ -3,44 +3,160 @@
   "WorkspaceRootPath": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\profile.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\userinfoforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\userinfoforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\updateuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\updateuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\updatepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\updatepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\showuserprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\showuserprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\getuserordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\getuserordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\getuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\getuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\edituserinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\edituserinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\deleteuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\deleteuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\createuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\createuserbyadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\admin\\usermanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\admin\\usermanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\profiles\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\order\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\order\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\cart\\operation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\cart\\operation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\editinfo.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\editinfo.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ACEB4AAE-9C1D-42AD-8212-D7F250F7C77B}|EShop.Framework\\EShop.Framework.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.framework\\persianidentityerrordescriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,36 +167,8 @@
       "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\tools\\persinaidentityerrordescriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\cartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\editinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\editinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\edituserinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\edituserinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\showuserprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\showuserprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\admin\\usermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\admin\\ordermanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -95,52 +183,16 @@
       "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\applicationservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\userinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\admin\\ordermanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\admin\\ordermanagement.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4C393624-4ACA-AF2A-34A3-FC0B891EFFA4}|EShop.Application\\EShop.Application.csproj|solutionrelative:eshop.application\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\order\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\order\\checkout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217132221_removeRoleFromUserTbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infra.Data\\Migrations\\20251217132221_removeRoleFromUserTbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217132020_removePAsswordFromUserTbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infra.Data\\Migrations\\20251217132020_removePAsswordFromUserTbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\user\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\cart\\operation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\pages\\cart\\operation.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.web\\pages\\cart\\operation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -175,12 +227,12 @@
       "RelativeMoniker": "D:0:0:{B4CB8617-7C61-0298-845A-604C42139E0B}|EShop.Web\\EShop.Web.csproj|solutionrelative:eshop.web\\wwwroot\\js\\shopcart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\userinfoforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\userinfoforadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\migrations\\20251217132020_removepasswordfromusertbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\migrations\\20251217132020_removepasswordfromusertbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\eshop.domain\\dtos\\useragg\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{90305A40-30DA-ED02-A383-AE9EBB87D536}|EShop.Domain\\EShop.Domain.csproj|solutionrelative:eshop.domain\\dtos\\useragg\\loginuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|d:\\maktabsharif\\dev\\projects\\hw22\\eshop\\infra.data\\migrations\\20251217132221_removerolefromusertbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9184777F-204F-E7D1-4177-D837D5C84EEF}|Infra.Data\\Infra.Data.csproj|solutionrelative:infra.data\\migrations\\20251217132221_removerolefromusertbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -190,17 +242,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "EShop.Domain\\Interfaces\\IUserRepository.cs",
               "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Interfaces\\IUserRepository.cs",
               "RelativeToolTip": "EShop.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA+wBoAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T13:17:27.142Z",
               "IsPinned": true,
@@ -208,13 +260,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Infra.Data\\Repositories\\UserRepository.cs",
               "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\UserRepository.cs*",
               "RelativeToolTip": "Infra.Data\\Repositories\\UserRepository.cs*",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAewHgAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwBoAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-14T14:50:34.037Z",
               "IsPinned": true,
@@ -222,13 +274,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 19,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "EShop.Application\\Services\\UserService.cs",
               "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\UserService.cs",
               "RelativeToolTip": "EShop.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAnwHwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAowCUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T13:18:13.908Z",
               "IsPinned": true,
@@ -236,16 +288,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "IUserService.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Interfaces\\IUserService.cs",
               "RelativeDocumentMoniker": "EShop.Application\\Interfaces\\IUserService.cs",
               "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Interfaces\\IUserService.cs",
               "RelativeToolTip": "EShop.Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAywB8AAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T13:18:16.43Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserManagement.cshtml",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
+              "RelativeToolTip": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T13:49:02.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Profile.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Profile.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml.cs*",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\Profile.cshtml.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:24:27.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserInfoForAdminDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T16:33:29.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserInfoDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T14:07:05.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateUserByAdminDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UpdateUserByAdminDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UpdateUserByAdminDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UpdateUserByAdminDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UpdateUserByAdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:48:06.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdatePasswordDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UpdatePasswordDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UpdatePasswordDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UpdatePasswordDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UpdatePasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:48:02.049Z",
               "EditorCaption": ""
             },
             {
@@ -262,72 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Profile.cshtml",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Profile.cshtml",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml",
-              "RelativeToolTip": "EShop.Web\\Pages\\User\\Profile.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T12:56:45.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Profile.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Profile.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\User\\Profile.cshtml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBwAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:24:27.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowBMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T15:10:34.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Logout.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T15:39:32.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Program.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Program.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Program.cs",
-              "RelativeToolTip": "EShop.Web\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T15:41:39.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "RegisterUserDto.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\RegisterUserDto.cs",
               "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\RegisterUserDto.cs",
@@ -340,98 +405,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-14T15:20:00.368Z",
+              "DocumentIndex": 7,
+              "Title": "ShowUserProfileDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:26:42.145Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "EditInfo.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAADwv0YAAAAAAAAAAAAAAA==",
+              "Title": "LoginUserDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:23:14.29Z",
+              "WhenOpened": "2025-12-14T15:06:11.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "PersianIdentityErrorDescriber.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Framework\\PersianIdentityErrorDescriber.cs",
-              "RelativeDocumentMoniker": "EShop.Framework\\PersianIdentityErrorDescriber.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Framework\\PersianIdentityErrorDescriber.cs",
-              "RelativeToolTip": "EShop.Framework\\PersianIdentityErrorDescriber.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAIwEgAAAAnAAAAAAAAAA==",
+              "Title": "GetUserOrdersDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\GetUserOrdersDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\GetUserOrdersDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\GetUserOrdersDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\GetUserOrdersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T15:13:16.42Z",
+              "WhenOpened": "2025-12-17T16:39:32.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "PersinaIdentityErrorDescriber.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
-              "RelativeDocumentMoniker": "EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
-              "RelativeToolTip": "EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAwwAYAAAABAAAAAAAAAA==",
+              "Title": "GetUserDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\GetUserDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\GetUserDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\GetUserDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\GetUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T15:11:12.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CartRepository.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CartRepository.cs",
-              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\CartRepository.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CartRepository.cs",
-              "RelativeToolTip": "Infra.Data\\Repositories\\CartRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:22:41.569Z",
+              "WhenOpened": "2025-12-17T16:39:27.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infra.Data\\Persistence\\AppDbContext.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "Infra.Data\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T15:44:21.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EditInfo.cshtml",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\EditInfo.cshtml",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml",
-              "RelativeToolTip": "EShop.Web\\Pages\\User\\EditInfo.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T14:23:05.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "EditUserInfoDto.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\EditUserInfoDto.cs",
               "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\EditUserInfoDto.cs",
@@ -444,33 +470,338 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ShowUserProfileDto.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
-              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
-              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\ShowUserProfileDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "DeleteUserByAdminDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\DeleteUserByAdminDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\DeleteUserByAdminDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\DeleteUserByAdminDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\DeleteUserByAdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:26:42.145Z",
+              "WhenOpened": "2025-12-17T16:39:18.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserManagement.cshtml",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
-              "RelativeToolTip": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml",
+              "DocumentIndex": 14,
+              "Title": "CreateUserByAdminDto.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\CreateUserByAdminDto.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\CreateUserByAdminDto.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\CreateUserByAdminDto.cs",
+              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\CreateUserByAdminDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T13:49:02.304Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:39:16.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "EShop.Application\\Profiles\\MappingProfile.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "EShop.Application\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:39:01.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserManagement.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\UserManagement.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\Admin\\UserManagement.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:09:17.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "EShop.Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "EShop.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:44:44.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Persistence\\AppDbContext.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infra.Data\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:44:21.28Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Details.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\Details.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:31:42.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Program.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Program.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Program.cs",
+              "RelativeToolTip": "EShop.Web\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:41:39.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Details.cshtml",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T12:56:13.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Profiles\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Profiles\\MappingProfile.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Profiles\\MappingProfile.cs",
+              "RelativeToolTip": "EShop.Web\\Profiles\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:36:19.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Checkout.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwDoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:39:38.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Operation.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAIwDcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T17:39:38.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EditInfo.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\EditInfo.cshtml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T14:23:14.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T15:10:34.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20251217162339_removeIdFromUser.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs",
+              "RelativeToolTip": "Infra.Data\\Migrations\\20251217162339_removeIdFromUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:23:39.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "Infra.Data\\Repositories\\ProductRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:21:28.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "Infra.Data\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T16:21:01.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\OrderRepository.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "Infra.Data\\Repositories\\OrderRepository.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwEwAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T14:40:31.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CartRepository.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CartRepository.cs",
+              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\CartRepository.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\CartRepository.cs",
+              "RelativeToolTip": "Infra.Data\\Repositories\\CartRepository.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAIwDkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:22:41.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "EShop.Application\\Services\\OrderService.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "EShop.Application\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:46:29.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Profile.cshtml",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Profile.cshtml",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\Profile.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T12:56:45.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:39:32.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "EShop.Web\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-14T15:20:00.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PersianIdentityErrorDescriber.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Framework\\PersianIdentityErrorDescriber.cs",
+              "RelativeDocumentMoniker": "EShop.Framework\\PersianIdentityErrorDescriber.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Framework\\PersianIdentityErrorDescriber.cs",
+              "RelativeToolTip": "EShop.Framework\\PersianIdentityErrorDescriber.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAIwEgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:13:16.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PersinaIdentityErrorDescriber.cs",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
+              "RelativeDocumentMoniker": "EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
+              "RelativeToolTip": "EShop.Application\\Tools\\PersinaIdentityErrorDescriber.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAwwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T15:11:12.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "EditInfo.cshtml",
+              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml",
+              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\EditInfo.cshtml",
+              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\EditInfo.cshtml",
+              "RelativeToolTip": "EShop.Web\\Pages\\User\\EditInfo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T14:23:05.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
               "Title": "OrderManagement.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\OrderManagement.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Admin\\OrderManagement.cshtml",
@@ -478,12 +809,11 @@
               "RelativeToolTip": "EShop.Web\\Pages\\Admin\\OrderManagement.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T13:49:06.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:49:06.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 43,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Login.cshtml.cs",
@@ -491,12 +821,11 @@
               "RelativeToolTip": "EShop.Web\\Pages\\Account\\Login.cshtml.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAywCEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:50:45.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:50:45.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 44,
               "Title": "ApplicationServicesRegistration.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\ApplicationServicesRegistration.cs",
               "RelativeDocumentMoniker": "EShop.Application\\ApplicationServicesRegistration.cs",
@@ -504,25 +833,11 @@
               "RelativeToolTip": "EShop.Application\\ApplicationServicesRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:48:54.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T17:48:54.235Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserInfoDto.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
-              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
-              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UserInfoDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T14:07:05.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 45,
               "Title": "OrderManagement.cshtml.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Admin\\OrderManagement.cshtml.cs",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Admin\\OrderManagement.cshtml.cs",
@@ -530,25 +845,11 @@
               "RelativeToolTip": "EShop.Web\\Pages\\Admin\\OrderManagement.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:39:28.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T14:39:28.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\OrderService.cs",
-              "RelativeDocumentMoniker": "EShop.Application\\Services\\OrderService.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Services\\OrderService.cs",
-              "RelativeToolTip": "EShop.Application\\Services\\OrderService.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAswGQAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:46:29.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 46,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Application\\Interfaces\\IOrderService.cs",
               "RelativeDocumentMoniker": "EShop.Application\\Interfaces\\IOrderService.cs",
@@ -556,12 +857,11 @@
               "RelativeToolTip": "EShop.Application\\Interfaces\\IOrderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:46:32.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:46:32.439Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 47,
               "Title": "IOrderRepository.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Interfaces\\IOrderRepository.cs",
               "RelativeDocumentMoniker": "EShop.Domain\\Interfaces\\IOrderRepository.cs",
@@ -569,38 +869,11 @@
               "RelativeToolTip": "EShop.Domain\\Interfaces\\IOrderRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:44:08.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:44:08.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "OrderRepository.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\OrderRepository.cs",
-              "RelativeDocumentMoniker": "Infra.Data\\Repositories\\OrderRepository.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Repositories\\OrderRepository.cs",
-              "RelativeToolTip": "Infra.Data\\Repositories\\OrderRepository.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T14:40:31.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Checkout.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\Order\\Checkout.cshtml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBYAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:39:38.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 56,
               "Title": "20251217132020_removePAsswordFromUserTbl.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217132020_removePAsswordFromUserTbl.cs",
               "RelativeDocumentMoniker": "Infra.Data\\Migrations\\20251217132020_removePAsswordFromUserTbl.cs",
@@ -608,25 +881,11 @@
               "RelativeToolTip": "Infra.Data\\Migrations\\20251217132020_removePAsswordFromUserTbl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:20:20.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:20:20.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "EShop.Domain\\Entities\\User.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Entities\\User.cs",
-              "RelativeToolTip": "EShop.Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T15:44:44.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 57,
               "Title": "20251217132221_removeRoleFromUserTbl.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\Infra.Data\\Migrations\\20251217132221_removeRoleFromUserTbl.cs",
               "RelativeDocumentMoniker": "Infra.Data\\Migrations\\20251217132221_removeRoleFromUserTbl.cs",
@@ -634,25 +893,11 @@
               "RelativeToolTip": "Infra.Data\\Migrations\\20251217132221_removeRoleFromUserTbl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T13:22:21.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T13:22:21.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\User\\Details.cshtml",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\User\\Details.cshtml",
-              "RelativeToolTip": "EShop.Web\\Pages\\User\\Details.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-17T12:56:13.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 48,
               "Title": "Operation.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Cart\\Operation.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Cart\\Operation.cshtml",
@@ -664,20 +909,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Operation.cshtml.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
-              "RelativeDocumentMoniker": "EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
-              "RelativeToolTip": "EShop.Web\\Pages\\Cart\\Operation.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T17:39:38.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 49,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Index.cshtml.cs",
@@ -689,7 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 55,
               "Title": "shopcart.js",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\wwwroot\\js\\shopcart.js",
               "RelativeDocumentMoniker": "EShop.Web\\wwwroot\\js\\shopcart.js",
@@ -701,7 +933,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 52,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\AccessDenied.cshtml",
@@ -713,7 +945,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 51,
               "Title": "Checkout.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Checkout.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Order\\Checkout.cshtml",
@@ -725,7 +957,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 50,
               "Title": "Final.cshtml.cs",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Order\\Final.cshtml.cs",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Order\\Final.cshtml.cs",
@@ -737,7 +969,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 54,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Index.cshtml",
@@ -749,7 +981,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 53,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Web\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "EShop.Web\\Pages\\Account\\Login.cshtml",
@@ -758,30 +990,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-14T14:50:43.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "UserInfoForAdminDto.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
-              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
-              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\UserInfoForAdminDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T16:33:29.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "LoginUserDto.cs",
-              "DocumentMoniker": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
-              "RelativeDocumentMoniker": "EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
-              "ToolTip": "D:\\MaktabSharif\\dev\\projects\\HW22\\EShop\\EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
-              "RelativeToolTip": "EShop.Domain\\Dtos\\UserAgg\\LoginUserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T15:06:11.837Z"
             }
           ]
         },

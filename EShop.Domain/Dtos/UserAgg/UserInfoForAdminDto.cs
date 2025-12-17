@@ -5,7 +5,7 @@ namespace EShop.Domain.Dtos.UserAgg
 {
     public class UserInfoForAdminDto
     {
-        public int Id { get; set; }
+        public int IdentityUserId { get; set; }
         public string UserName { get; set; }
         public string FullName { get; set; }
 

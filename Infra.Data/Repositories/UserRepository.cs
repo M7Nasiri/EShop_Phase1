@@ -9,34 +9,34 @@ namespace Infra.Data.Repositories
 {
     public class UserRepository(AppDbContext context, IMapper mapper) : IUserRepository
     {
-        public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
-        {
-            var user = mapper.Map<User>(create);
-            context.Add(user);
-            context.SaveChanges();
+        //public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
+        //{
+        //    var user = mapper.Map<User>(create);
+        //    context.Add(user);
+        //    context.SaveChanges();
           
-            return user.Id;
+        //    return user.IdentityUserId;
 
-        }
+        //}
 
         public bool DeleteUserByAdmin(int adminId, DeleteUserByAdminDto delete)
         {
-            var user = context.Users.FirstOrDefault(u => u.Id == delete.Id);
+            var user = context.Users.FirstOrDefault(u => u.IdentityUserId == delete.IdentityUserId);
             if (user != null)
             {
-                return context.Users.Where(u => u.Id == delete.Id).ExecuteUpdate(setters => setters.SetProperty((u => u.IsDelete), true)) > 0;
+                return context.Users.Where(u => u.IdentityUserId == delete.IdentityUserId).ExecuteUpdate(setters => setters.SetProperty((u => u.IsDelete), true)) > 0;
             }
             return false;
         }
         public bool Delete(int id)
         {
-            return context.Users.Where(u => u.Id == id).ExecuteUpdate(setters => setters.SetProperty((u => u.IsDelete), true)) > 0;
+            return context.Users.Where(u => u.IdentityUserId == id).ExecuteUpdate(setters => setters.SetProperty((u => u.IsDelete), true)) > 0;
         }
 
 
         public int FindIdByUserName(string userName)
         {
-            return context.Users.Where(u => u.UserName == userName).Select(u => u.Id).FirstOrDefault();
+            return context.Users.Where(u => u.UserName == userName).Select(u => u.IdentityUserId).FirstOrDefault();
         }
 
         public List<GetUserDto> GetAll()
@@ -46,7 +46,7 @@ namespace Infra.Data.Repositories
 
         public GetUserDto? GetUserById(int id)
         {
-            return mapper.Map<GetUserDto>(context.Users.Include(u=>u.Orders).FirstOrDefault(u => u.Id == id));
+            return mapper.Map<GetUserDto>(context.Users.Include(u=>u.Orders).FirstOrDefault(u => u.IdentityUserId == id));
         }
 
         public bool IsUserExist(string userName)
@@ -87,7 +87,7 @@ namespace Infra.Data.Repositories
 
         public bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model)
         {
-            return context.Users.Where(u => u.Id == id)
+            return context.Users.Where(u => u.IdentityUserId == id)
                          .ExecuteUpdate(setters => setters
                          .SetProperty((u => u.UserName), model.UserName)) > 0;
                         // .SetProperty((u => u.Password), model.Password)
@@ -96,24 +96,24 @@ namespace Infra.Data.Repositories
 
         public List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId)
         {
-            return mapper.Map<List<UserInfoForAdminDto>>(context.Users.Where(u => u.Id != userId)
+            return mapper.Map<List<UserInfoForAdminDto>>(context.Users.Where(u => u.IdentityUserId != userId)
                 .ToList());
         }
 
         public long GetUserWallet(int userId)
         {
-            return context.Users.Where(u => u.Id == userId).Select(x => x.Credit).FirstOrDefault();
+            return context.Users.Where(u => u.IdentityUserId == userId).Select(x => x.Credit).FirstOrDefault();
         }
 
         public void UpdateUserWallet(int userId, long remain)
         {
-            context.Users.Where(u => u.Id == userId).ExecuteUpdate(setters => setters
+            context.Users.Where(u => u.IdentityUserId == userId).ExecuteUpdate(setters => setters
             .SetProperty((x => x.Credit), remain));
         }
 
         public List<GetUserDto> GetAllNotCurrent(int currentId)
         {
-            return mapper.Map<List<GetUserDto>>(context.Users.Include(u=>u.Orders).Where(u=>u.Id !=currentId).ToList());
+            return mapper.Map<List<GetUserDto>>(context.Users.Include(u=>u.Orders).Where(u=>u.IdentityUserId !=currentId).ToList());
         }
 
         public GetUserOrdersDto GetUserOrders(int id)

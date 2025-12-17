@@ -21,7 +21,7 @@ namespace EShop.Web.Pages.User
             UserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
             ProfileInfo = await _userManager.Users.Where(u => u.Id == UserId).Select(p => new ShowUserPrfofileDto
             {
-                Id = UserId,
+                IdentityUserId = UserId,
                 Email = p.Email,
                 UserName = p.UserName,
             }).FirstOrDefaultAsync();

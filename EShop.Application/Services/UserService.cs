@@ -9,14 +9,14 @@ namespace EShop.Application.Services
 {
     public class UserService(IUserRepository userRepository,ILogger<UserService> _logger) : IUserService
     {
-        public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
-        {
-            if (IsUserExist(create.UserName))
-            {
-                return 0;
-            }
-            return userRepository.CreateUserByAdmin(adminId, create);
-        }
+        //public int CreateUserByAdmin(int adminId, CreateUserByAdminDto create)
+        //{
+        //    if (IsUserExist(create.UserName))
+        //    {
+        //        return 0;
+        //    }
+        //    return userRepository.CreateUserByAdmin(adminId, create);
+        //}
 
         public bool Delete(int id)
         {
