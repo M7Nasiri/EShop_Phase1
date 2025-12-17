@@ -1,0 +1,54 @@
+﻿@page
+@model EShop.Web.Pages.User.EditInfoModel
+@{
+    ViewData["Title"] = "ویرایش اطلاعات کاربر";
+}
+
+<div class="container mt-4" dir="rtl">
+    <div class="card shadow-sm">
+        <div class="card-header bg-warning">
+            <h5 class="mb-0">ویرایش اطلاعات</h5>
+        </div>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">
+                <text>@TempData["Error"]</text>
+            </div>
+        }
+        <div class="card-body">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">ایمیل</label>
+                    <input asp-for="model.Email" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">نام کامل</label>
+                    <input asp-for="model.FullName" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">اعتبار</label>
+                    <input asp-for="model.Credit" class="form-control" />
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                    <label class="form-label">رمز عبور فعلی</label>
+                    <input asp-for="model.CurrentPassword" type="password" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">رمز عبور جدید</label>
+                    <input asp-for="model.NewPassword" type="password" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    ذخیره تغییرات
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -95,5 +95,10 @@ namespace EShop.Application.Services
         {
             return await _orderRepository.Get(id);
         }
+
+        public async Task<List<GetOrderDto>> GetUserOrders(int userId)
+        {
+            return await _orderRepository.GetUserOrders(userId);
+        }
     }
 }

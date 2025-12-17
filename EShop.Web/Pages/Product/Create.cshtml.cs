@@ -19,10 +19,12 @@ namespace EShop.Web.Pages.Product
         public void OnGet()
         {
             Categories = _categoryService.GetAll();
+            //throw new Exception("Error in create product");
         }
 
         public IActionResult OnPost()
         {
+            
             if (!ModelState.IsValid)
             {
                 Categories = _categoryService.GetAll();

@@ -1,0 +1,13 @@
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\bin\Debug\net10.0\EShop.Framework.deps.json
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\bin\Debug\net10.0\EShop.Framework.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\bin\Debug\net10.0\EShop.Framework.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.csproj.AssemblyReference.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.AssemblyInfoInputs.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.AssemblyInfo.cs
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.csproj.CoreCompileInputs.cache
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.sourcelink.json
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\refint\EShop.Framework.dll
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\EShop.Framework.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Framework\obj\Debug\net10.0\ref\EShop.Framework.dll

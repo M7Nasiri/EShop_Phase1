@@ -54,15 +54,15 @@ namespace Infra.Data.Repositories
             return context.Users.Any(u => u.UserName == userName);
         }
 
-        public GetUserDto? Login(LoginUserDto login)
-        {
-            var user = context.Users.Where(u => u.UserName == login.UserName && u.Password == login.Password).FirstOrDefault();
-            if (user != null)
-            {
-                return mapper.Map<GetUserDto>(user);
-            }
-            return null;
-        }
+        //public GetUserDto? Login(LoginUserDto login)
+        //{
+        //    var user = context.Users.Where(u => u.UserName == login.UserName && u.Password == login.Password).FirstOrDefault();
+        //    if (user != null)
+        //    {
+        //        return mapper.Map<GetUserDto>(user);
+        //    }
+        //    return null;
+        //}
 
         public bool Register(RegisterUserDto register)
         {
@@ -73,11 +73,11 @@ namespace Infra.Data.Repositories
             return context.SaveChanges() > 0;
         }
 
-        public bool UpdatePassword(int id, UpdatePasswordDto model)
-        {
-            return context.Users.Where(u => u.Id == id)
-                        .ExecuteUpdate(setters => setters.SetProperty((u => u.Password), model.Password)) > 0;
-        }
+        //public bool UpdatePassword(int id, UpdatePasswordDto model)
+        //{
+        //    return context.Users.Where(u => u.Id == id)
+        //                .ExecuteUpdate(setters => setters.SetProperty((u => u.Password), model.Password)) > 0;
+        //}
 
         //public bool UpdateRememberMe(int id, bool rememberMe)
         //{
@@ -89,9 +89,9 @@ namespace Infra.Data.Repositories
         {
             return context.Users.Where(u => u.Id == id)
                          .ExecuteUpdate(setters => setters
-                         .SetProperty((u => u.UserName), model.UserName)
-                         .SetProperty((u => u.Password), model.Password)
-                         .SetProperty((u => u.Role), model.Role)) > 0;
+                         .SetProperty((u => u.UserName), model.UserName)) > 0;
+                        // .SetProperty((u => u.Password), model.Password)
+                         //.SetProperty((u => u.Role), model.Role)) > 0;
         }
 
         public List<UserInfoForAdminDto> GetUserInfosForAdmin(int userId)
@@ -118,8 +118,25 @@ namespace Infra.Data.Repositories
 
         public GetUserOrdersDto GetUserOrders(int id)
         {
-            return mapper.Map<GetUserOrdersDto>(context.Users.Include(u => u.Orders)
-                .ThenInclude(u => u.OrderItems).ThenInclude(oi=>oi.Product).Where(u => u.Id == id).FirstOrDefault());
+            return mapper.Map<GetUserOrdersDto>(context.Users.Where(u => u.IdentityUserId == id).Include(u => u.Orders)
+                .ThenInclude(u => u.OrderItems).ThenInclude(oi=>oi.Product).FirstOrDefault());
+        }
+
+        public UserInfoDto GetUserInfo(int userId)
+        {
+            return context.Users.Where(u => u.IdentityUserId == userId).Select(u => new UserInfoDto
+            {
+                Credit = u.Credit,
+                FullName = u.FullName
+            }).FirstOrDefault();
+
+        }
+
+        public void SetUserInfo(int userId, long credit, string fullName)
+        {
+             context.Users.Where(u => u.IdentityUserId == userId).ExecuteUpdate(setters=>setters
+            .SetProperty((u=>u.FullName),fullName)
+            .SetProperty((u=>u.Credit),credit));
         }
     }
 }

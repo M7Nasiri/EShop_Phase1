@@ -17,5 +17,7 @@ namespace EShop.Domain.Interfaces
 
         Task<List<GetOrderDto>> GetAll();
         Task<GetOrderDto> Get(int id);
+
+        Task<List<GetOrderDto>> GetUserOrders(int userId);
     }
 }

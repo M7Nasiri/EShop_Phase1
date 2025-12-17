@@ -1,6 +1,7 @@
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\bin\Debug\net10.0\EShop.Domain.deps.json
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\bin\Debug\net10.0\EShop.Domain.dll
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\bin\Debug\net10.0\EShop.Domain.pdb
+D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\obj\Debug\net10.0\EShop.Domain.csproj.AssemblyReference.cache
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\obj\Debug\net10.0\EShop.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\obj\Debug\net10.0\EShop.Domain.AssemblyInfoInputs.cache
 D:\MaktabSharif\dev\projects\HW22\EShop\EShop.Domain\obj\Debug\net10.0\EShop.Domain.AssemblyInfo.cs

@@ -1,15 +1,19 @@
 <Solution>
-  <Folder Name="/Application/">
+  <Folder Name="/framework/">
+    <Project Path="EShop.Framework/EShop.Framework.csproj" Id="aceb4aae-9c1d-42ad-8212-d7f250f7c77b" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Application/">
     <Project Path="EShop.Application/EShop.Application.csproj" />
   </Folder>
-  <Folder Name="/Domain/">
+  <Folder Name="/src/Domain/">
     <Project Path="EShop.Domain/EShop.Domain.csproj" />
   </Folder>
-  <Folder Name="/Infrastructure/">
+  <Folder Name="/src/Infrastructure/">
     <Project Path="Infra.Data/Infra.Data.csproj" />
     <Project Path="Infra.IoC/Infra.IoC.csproj" />
   </Folder>
-  <Folder Name="/Presentation/">
+  <Folder Name="/src/Presentation/">
     <Project Path="EShop.Web/EShop.Web.csproj" />
   </Folder>
 </Solution>

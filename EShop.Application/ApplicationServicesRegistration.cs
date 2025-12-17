@@ -12,5 +12,17 @@ namespace EShop.Application
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
         }
+
+        public static void ApplyCookieConfigurations(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(option =>
+            {
+                //option.Cookie.Name = "guest_cart";
+                option.ExpireTimeSpan = TimeSpan.FromDays(7);
+                option.LoginPath = "/Login";
+                option.AccessDeniedPath = "/Account/AccessDenied";
+                option.SlidingExpiration = true;
+            });
+        }
     }
 }

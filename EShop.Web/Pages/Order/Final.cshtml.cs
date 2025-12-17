@@ -7,7 +7,7 @@ using Serilog;
 
 namespace EShop.Web.Pages.Order
 {
-    [Authorize(Roles = "Admin,NormalUser")]
+    [Authorize(Roles = "Admin,User")]
     public class FinalModel(IOrderService _orderService) : PageModel
     {
         public bool IsSuccess { get; set; }

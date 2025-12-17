@@ -6,6 +6,7 @@ using EShop.Domain.Dtos.ProductAgg;
 using EShop.Domain.Entities;
 using EShop.Web.ViewModels.ProductAgg;
 using Infra.Data.Persistence;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Serilog;
@@ -13,6 +14,7 @@ using System.Security.Claims;
 
 namespace EShop.Web.Pages
 {
+    //[Authorize(Roles = "User")]
     public class IndexModel(IProductService _productService,IMapper mapper,ICartService _cartService
         ,ICategoryService _categoryService) : PageModel
     {

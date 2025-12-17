@@ -17,5 +17,6 @@ namespace EShop.Application.Interfaces
         Task<bool> ShippededOrder(int orderId);
         Task<List<GetOrderDto>> GetAll();
         Task<GetOrderDto> Get(int id);
+        Task<List<GetOrderDto>> GetUserOrders(int userId);
     }
 }

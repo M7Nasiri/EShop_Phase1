@@ -53,20 +53,20 @@ namespace EShop.Application.Services
             return userRepository.IsUserExist(userName);
         }
 
-        public GetUserDto? Login(LoginUserDto login)
-        {
-            return userRepository.Login(login);
-        }
+        //public GetUserDto? Login(LoginUserDto login)
+        //{
+        //    return userRepository.Login(login);
+        //}
 
         public bool Register(RegisterUserDto register)
         {
             return userRepository.Register(register);
         }
 
-        public bool UpdatePassword(int id, UpdatePasswordDto model)
-        {
-            return userRepository.UpdatePassword(id, model);
-        }
+        //public bool UpdatePassword(int id, UpdatePasswordDto model)
+        //{
+        //    return userRepository.UpdatePassword(id, model);
+        //}
 
         //public bool UpdateRememberMe(int id, bool rememberMe)
         //{
@@ -118,6 +118,16 @@ namespace EShop.Application.Services
         public GetUserOrdersDto GetUserOrders(int id)
         {
             return userRepository.GetUserOrders(id);
+        }
+
+        public UserInfoDto GetUserInfo(int userId)
+        {
+            return userRepository.GetUserInfo(userId);    
+        }
+
+        public void SetUserInfo(int userId, long credit, string fullName)
+        {
+            userRepository.SetUserInfo(userId, credit, fullName); 
         }
     }
 }

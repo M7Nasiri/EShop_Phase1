@@ -2,11 +2,13 @@
 using EShop.Application.Interfaces;
 using EShop.Application.Services;
 using EShop.Domain.Interfaces;
+using EShop.Framework;
 using EShop.Web.Middlewares;
 using EShop.Web.Services;
 using Infra.Data.Persistence;
 using Infra.Data.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
@@ -58,7 +60,25 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 #endregion /Config Serilog
 
+#region ConfigIdentity
 
+builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(
+    options =>
+    {
+        options.SignIn.RequireConfirmedEmail = false;
+        options.SignIn.RequireConfirmedPhoneNumber = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireUppercase = false;
+        options.Lockout.MaxFailedAccessAttempts = 5;
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(60);
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 4;
+        options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddErrorDescriber<PersianIdentityErrorDescriber>()
+    .AddEntityFrameworkStores<AppDbContext>();
+builder.Services.ApplyCookieConfigurations();
+#endregion /ConfigIdentity
 
 builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
@@ -67,17 +87,23 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("AppConnectionString")));
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-}).AddCookie(options =>
-{
-    options.LoginPath = "/Login";
-    options.LogoutPath = "/Logout";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
-});
+
+#region Custom Authentication
+
+//builder.Services.AddAuthentication(options =>
+//{
+//    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+//}).AddCookie(options =>
+//{
+//    options.LoginPath = "/Login";
+//    options.LogoutPath = "/Logout";
+//    options.ExpireTimeSpan = TimeSpan.FromMinutes(43200);
+//});
+
+#endregion /Custom Authentication
+
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ICartRepository, CartRepository>();
@@ -117,6 +143,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();

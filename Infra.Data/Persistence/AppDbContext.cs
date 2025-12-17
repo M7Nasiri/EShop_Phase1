@@ -1,4 +1,6 @@
 ﻿using EShop.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using System;
@@ -7,7 +9,7 @@ using System.Text;
 
 namespace Infra.Data.Persistence
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<IdentityUser<int>,IdentityRole<int>,int>
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Category> Cateogries { get; set; }
@@ -16,11 +18,11 @@ namespace Infra.Data.Persistence
         public DbSet<Product> Products { get; set; }
         public DbSet<UserCartItem> UserCartItems { get; set; }
 
-
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+      : base(options)
         {
-
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

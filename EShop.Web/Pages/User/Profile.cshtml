@@ -1,0 +1,130 @@
+﻿@page
+@using EShop.Domain.Enum
+@model EShop.Web.Pages.User.ProfileModel
+@{
+    ViewData["Title"] = "پروفایل کاربر";
+}
+
+<div class="container mt-4" dir="rtl">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">اطلاعات پروفایل</h5>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-3"><strong>نام کاربری:</strong> @Model.ProfileInfo.UserName</div>
+                <div class="col-md-3"><strong>ایمیل:</strong> @Model.ProfileInfo.Email</div>
+                <div class="col-md-3"><strong>نام کامل:</strong> @Model.ProfileInfo.UserInfo.FullName</div>
+                <div class="col-md-3"><strong>اعتبار:</strong> @Model.ProfileInfo.UserInfo.Credit.ToString("N0") تومان</div>
+            </div>
+            <div class="row mb-3">
+                <div class="text-center"><a class="btn btn-warning" asp-page="EditInfo" asp-route-id="@Model.UserId">ویرایش اطلاعات</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-4 shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h5 class="mb-0">سفارشات</h5>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-light">
+                    <tr>
+                        <th>شماره سفارش</th>
+                        <th>مبلغ کل</th>
+                        <th>وضعیت</th>
+                        <th>تاریخ</th>
+                        <th>جزئیات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.ProfileInfo.Orders != null && Model.ProfileInfo.Orders.Any())
+                    {
+                        @foreach (var order in Model.ProfileInfo.Orders)
+                        {
+                            <tr>
+                                <td>@order.Id</td>
+                                <td>@order.TotalPrice.ToString("N0") تومان</td>
+                                <td>
+                                    @switch (order.Status)
+                                    {
+                                        case OrderStatus.Pending:
+                                            <span class="badge bg-secondary">در انتظار تأیید</span>
+                                            ;
+                                            break;
+
+                                        case OrderStatus.Paid:
+                                            <span class="badge bg-primary">پرداخت شده</span>
+                                            ;
+                                            break;
+
+                                        case OrderStatus.Shipped:
+                                            <span class="badge bg-info text-dark">ارسال شده</span>
+                                            ;
+                                            break;
+                                    }
+                                </td>
+                                <td>@order.CreateDate.ToString("yyyy/MM/dd")</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#orderModal-@order.Id">
+                                        مشاهده
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="orderModal-@order.Id" tabindex="-1">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">جزئیات سفارش شماره @order.Id</h5>
+                                                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-striped text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>کالا</th>
+                                                                <th>تعداد</th>
+                                                                <th>قیمت واحد</th>
+                                                                <th>قیمت کل</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @if (order.OrderItems != null)
+                                                            {
+                                                                foreach (var item in order.OrderItems)
+                                                                {
+                                                                    <tr>
+                                                                        <td>
+                                                                            @item.Product?.Title
+                                                                            @if (!string.IsNullOrEmpty(item.Product?.ImagePath))
+                                                                            {
+                                                                                <img src="@item.Product.ImagePath"
+                                                                                     style="width:40px;height:40px;object-fit:cover;border-radius:6px;margin-right:8px;" />
+                                                                            }
+                                                                        </td>
+                                                                        <td>@item.Amount</td>
+                                                                        <td>@item.UnitPrice.ToString("N0")</td>
+                                                                        <td>@((item.Amount* item.UnitPrice).ToString("N0"))</td>
+                                                                    </tr>
+                                                                }
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+```

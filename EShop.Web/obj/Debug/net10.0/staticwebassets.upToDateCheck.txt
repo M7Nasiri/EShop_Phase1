@@ -71,10 +71,12 @@ wwwroot\Files\Products\1.jpg
 wwwroot\Files\Products\10.jpg
 wwwroot\Files\Products\16c2a71f-1313-4824-8f1d-d7dba5e3dc30.jpg
 wwwroot\Files\Products\2.jpg
+wwwroot\Files\Products\283a3dc4-fa65-4e97-a436-8feb74042649.jpg
 wwwroot\Files\Products\3.jpg
 wwwroot\Files\Products\4.jpg
 wwwroot\Files\Products\45321ecb-8f1d-4c70-8236-3c40d37b94cf.jpg
 wwwroot\Files\Products\5.jpg
+wwwroot\Files\Products\55cd54d9-115f-47ec-b462-416c6edc6873.jpg
 wwwroot\Files\Products\6.jpg
 wwwroot\Files\Products\7.jpg
 wwwroot\Files\Products\8.jpg

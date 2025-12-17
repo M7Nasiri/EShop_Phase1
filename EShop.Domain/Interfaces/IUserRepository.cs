@@ -8,11 +8,11 @@ namespace EShop.Domain.Interfaces
         List<GetUserDto> GetAll();
         List<GetUserDto> GetAllNotCurrent(int currentId);
         GetUserDto? GetUserById(int id);
-        GetUserDto? Login(LoginUserDto login);
+       // GetUserDto? Login(LoginUserDto login);
         bool Register(RegisterUserDto register);
         bool IsUserExist(string userName);
         bool Delete(int id);
-        bool UpdatePassword(int id, UpdatePasswordDto model);
+       // bool UpdatePassword(int id, UpdatePasswordDto model);
         int FindIdByUserName(string userName);
         bool UpdateUserByAdmin(int adminId, int id, UpdateUserByAdminDto model);
         //bool UpdateRememberMe(int id, bool rememberMe);
@@ -22,6 +22,9 @@ namespace EShop.Domain.Interfaces
         long GetUserWallet(int userId);
         void UpdateUserWallet(int userId,long remain);
         GetUserOrdersDto GetUserOrders(int id);
+        UserInfoDto GetUserInfo(int userId);
+
+        void SetUserInfo(int userId,long credit,string fullName);
 
     }
 }

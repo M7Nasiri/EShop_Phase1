@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace EShop.Web.Pages.Order
 {
-    [Authorize(Roles = "Admin,NormalUser")]
+    [Authorize(Roles = "Admin,User")]
     public class CheckoutModel(ICartService _cartService,ICheckoutService _checkoutService,IUserService _userService,
         IOrderService _orderService) : PageModel
     {
@@ -18,7 +18,7 @@ namespace EShop.Web.Pages.Order
         public async Task<IActionResult> OnGet()
         {
             if (!User.Identity.IsAuthenticated)
-                return Redirect("/Account/Login");
+                return Redirect("/Login");
 
             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
 

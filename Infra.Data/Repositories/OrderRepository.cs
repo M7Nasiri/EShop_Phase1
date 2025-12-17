@@ -72,6 +72,10 @@ namespace Infra.Data.Repositories
             return await _context.Orders.Include(o => o.User).Include(o=>o.OrderItems).ThenInclude(o=>o.Product).Where(o => o.Id == orderId).FirstOrDefaultAsync();
         }
 
-
+        public async Task<List<GetOrderDto>> GetUserOrders(int userId)
+        {
+            return _mapper.Map<List<GetOrderDto>>(await _context.Orders.Where(o=>o.UserId == userId).Include(o => o.User).Include(o => o.OrderItems)
+               .ThenInclude(o => o.Product).ToListAsync());
+        }
     }
 }

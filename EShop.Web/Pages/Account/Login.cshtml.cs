@@ -5,6 +5,8 @@ using EShop.Domain.Entities;
 using EShop.Domain.Enum;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Serilog;
@@ -12,7 +14,11 @@ using System.Security.Claims;
 using System.Text.Json;
 namespace EShop.Web.Pages.Account
 {
-    public class LoginModel(IUserService userService,ICartService cartService) : PageModel
+
+    public class LoginModel(IUserService userService,ICartService cartService
+        ,SignInManager<IdentityUser<int>> signInManager
+        ,UserManager<IdentityUser<int>> userManager) 
+        : PageModel
     {
         [BindProperty]
         public LoginUserDto model { get; set; }
@@ -30,31 +36,10 @@ namespace EShop.Web.Pages.Account
             {
                 return Page();
             }
-            var result = userService.Login(model);
-            if (result == null)
-            {
-                ModelState.AddModelError("", "نام کاربری یا رمز عبور اشتباه است.");
-                return Page();
-            }
-            if (result != null)
-            {
-                model.Role = result.Role;
-                var claims = new List<Claim>() {
-                new Claim(ClaimTypes.Name,model.UserName),
-                new Claim(ClaimTypes.NameIdentifier,result.Id.ToString()),
-                new Claim(ClaimTypes.Role,model.Role.ToString())
-                };
-                var identity = new ClaimsIdentity(claims,
-                    CookieAuthenticationDefaults.AuthenticationScheme);
-                var principal = new ClaimsPrincipal(identity);
-                var properties = new AuthenticationProperties()
-                {
-                    IsPersistent = model.RememberMe
-                };
-                HttpContext.SignInAsync(principal, properties);
-                //userService.UpdateRememberMe(model.Id, model.RememberMe);
 
-
+            var login = await signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, false);
+            if (login.Succeeded)
+            {
                 var guestCartCookie = Request.Cookies["guest_cart"];
                 if (!string.IsNullOrEmpty(guestCartCookie))
                 {
@@ -63,7 +48,8 @@ namespace EShop.Web.Pages.Account
                         var guestItems = JsonSerializer.Deserialize<List<GuestCartItem>>(guestCartCookie);
                         if (guestItems != null && guestItems.Count > 0)
                         {
-                            await cartService.MergeGuestCartIntoUserCart(result.Id, guestItems);
+                            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+                            await cartService.MergeGuestCartIntoUserCart(userId, guestItems);
                         }
                     }
                     catch
@@ -71,23 +57,77 @@ namespace EShop.Web.Pages.Account
                         // اگر JSON خراب بود، نادیده می‌گیریم
                     }
 
-                   // Response.Cookies.Delete("guest_cart");
+                    // Response.Cookies.Delete("guest_cart");
                 }
-
-
-                if (result.Role == RoleEnum.NormalUser)
-                {
-                    Log.Information("User Logged in");
-                    return RedirectToPage("/Index");
-                }
-                if (result.Role == RoleEnum.Admin)
-                {
-                    Log.Information("Admin Logged in");
-                    return RedirectToPage("/Admin/ProductManagement");
-                }
+                
+                return RedirectToPage("/Index");
+                
             }
+            else
+            {
+                ModelState.AddModelError("", "نام کاربری یا رمز عبور اشتباه است.");
+                return Page();
+            }
+
+
+            //var result = userService.Login(model);
+            //if (result == null)
+            //{
+            //    ModelState.AddModelError("", "نام کاربری یا رمز عبور اشتباه است.");
+            //    return Page();
+            //}
+            //if (result != null)
+            //{
+            //    model.Role = result.Role;
+            //    var claims = new List<Claim>() {
+            //    new Claim(ClaimTypes.Name,model.UserName),
+            //    new Claim(ClaimTypes.NameIdentifier,result.Id.ToString()),
+            //    new Claim(ClaimTypes.Role,model.Role.ToString())
+            //    };
+            //    var identity = new ClaimsIdentity(claims,
+            //        CookieAuthenticationDefaults.AuthenticationScheme);
+            //    var principal = new ClaimsPrincipal(identity);
+            //    var properties = new AuthenticationProperties()
+            //    {
+            //        IsPersistent = model.RememberMe
+            //    };
+            //    HttpContext.SignInAsync(principal, properties);
+            //    //userService.UpdateRememberMe(model.Id, model.RememberMe);
+
+
+            //    var guestCartCookie = Request.Cookies["guest_cart"];
+            //    if (!string.IsNullOrEmpty(guestCartCookie))
+            //    {
+            //        try
+            //        {
+            //            var guestItems = JsonSerializer.Deserialize<List<GuestCartItem>>(guestCartCookie);
+            //            if (guestItems != null && guestItems.Count > 0)
+            //            {
+            //                await cartService.MergeGuestCartIntoUserCart(result.Id, guestItems);
+            //            }
+            //        }
+            //        catch
+            //        {
+            //            // اگر JSON خراب بود، نادیده می‌گیریم
+            //        }
+
+            //       // Response.Cookies.Delete("guest_cart");
+            //    }
+
+
+            //    if (result.Role == RoleEnum.NormalUser)
+            //    {
+            //        Log.Information("User Logged in");
+            //        return RedirectToPage("/Index");
+            //    }
+            //    if (result.Role == RoleEnum.Admin)
+            //    {
+            //        Log.Information("Admin Logged in");
+            //        return RedirectToPage("/Admin/ProductManagement");
+            //    }
+            //}
             //ModelState.AddModelError("", "نام کاربری یا رمز عبور اشتباه است.");
-            return Page();
+            //return Page();
         }
     }
 }
